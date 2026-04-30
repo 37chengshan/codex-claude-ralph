@@ -370,7 +370,7 @@ class OrchestratorIntegrationTests(unittest.TestCase):
         self.assertEqual(state["stories"][0]["status"], "pending")
         self.assertIn("attempt_count", state["stories"][0])
         self.assertTrue((case.root / "progress.txt").exists())
-        self.assertIn("CityGenius 订阅与支付接入测试", (case.root / "prompt.md").read_text(encoding="utf-8"))
+        self.assertIn("Replace this file with your real project goal", (case.root / "prompt.md").read_text(encoding="utf-8"))
 
     def test_plan_validation_rejects_duplicate_cycle_and_missing_dependency(self) -> None:
         for scenario, expected in (

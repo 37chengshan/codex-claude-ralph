@@ -10,6 +10,28 @@ Each iteration is still a fresh story-level loop. Public memory persists through
 
 **Amp is intentionally unsupported in this fork.**
 
+## Model Economics
+
+The point of this workflow is not "always use the smartest model for every token." The point is to spend a small amount of premium-model budget on decomposition, supervision, and review, then let cheaper execution models do the bulk of the implementation work.
+
+- **Best default quality bar:** `Claude Sonnet 4.6`
+- **Cheap worker option:** Claude can also be paired with other lower-cost coding models such as `MiniMax-2.7-Highspeed` for large-volume implementation passes
+- **Operating thesis:** a small amount of premium oversight plus a large amount of cheap execution can reach roughly the same shipped quality as an all-premium loop, while using far fewer expensive tokens
+
+In practice, this means you reserve premium reasoning for the parts that matter most:
+
+- task slicing
+- acceptance-criteria design
+- diff review
+- failure diagnosis
+- final quality gates
+
+And you push repetitive or high-volume code generation into the cheaper worker lane.
+
+![Ralph Model Economics](assets/ralph-model-economics.svg)
+
+If you only care about absolute worker quality and not cost, `Claude Sonnet 4.6` is still the best fit for the worker role. Ralph exists for the opposite case: keep quality high while reducing how much premium-model spend is required to ship.
+
 ## Prerequisites
 
 - `python3`
@@ -137,7 +159,7 @@ Ralph will:
 
 ![Ralph Codex Flowchart](assets/ralph-codex-flowchart.svg)
 
-The source loop definition lives in [flowchart/loop.mmd](/Users/cc/Documents/New%20project/codex-claude-ralph/flowchart/loop.mmd).
+The source loop definition lives in [flowchart/loop.mmd](flowchart/loop.mmd).
 
 ## Critical Concepts
 
@@ -184,6 +206,14 @@ Reviewer decisions are based on:
 - repo diff evidence
 - browser verification results
 - current story acceptance criteria
+
+## Example Case Study
+
+The repository includes one worked example of this loop driving a real target repo:
+
+- [CityGenius subscription + payment test](docs/citygenius-subscription-payment-test.md)
+
+That document shows how the fork was used to wire a copied Astro blog into a Stripe subscription skeleton with Playwright verification.
 
 ## Debugging
 

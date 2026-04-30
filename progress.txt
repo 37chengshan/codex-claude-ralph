@@ -1,6 +1,3 @@
-[20260430T093033Z] Plan initialized for citygenius-blog-ralph-test (generated).
-S1 complete: Astro now builds in Node SSR mode with @astrojs/node and a shared Stripe config layer that degrades safely when env vars are absent.
-S1 committed as 313be01 with `ralph: S1 Enable SSR Foundation`.
-S2 complete: added server-side Stripe Checkout session API for monthly/yearly subscriptions; build and Stripe config checks passed.
-S2 committed as ef02322 with `ralph: S2 Add Checkout Session API`.
-S3 build passes and required data markers are present, but completion is not yet proven because browser verification failed and the evidence does not confirm fallback and hosted billing-portal behavior.
+[example] This is the public progress log Ralph appends to while it runs.
+[example] Replace `prompt.md` or import your own `prd.json`, then run `./ralph.sh init`.
+[example] Runtime state, lock files, and run artifacts stay under `.codex-ralph/` and are not meant for publishing.

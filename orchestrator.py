@@ -951,6 +951,7 @@ def build_brief_prompt(
     has_agents_file: bool,
 ) -> str:
     compact_snapshot = compact_repo_snapshot(snapshot, int(config["max_diff_lines"]))
+    browser_verify_command = str(config.get("browser_verify_command", "")).strip()
     return f"""You are the orchestration layer. Produce the next execution brief for Claude.
 
 Rules:
@@ -959,12 +960,14 @@ Rules:
 - Reuse the story ID and title exactly.
 - Keep test_commands as small as possible while still proving the story.
 - Set verification_hints to include "browser" only when the story genuinely needs UI/browser verification.
+- If browser verification is required and a browser_verify_command is configured, prefer that exact command or a tighter subset that matches the same repo-local Playwright path.
 - claude_prompt must be ready to send directly to Claude as the worker instruction.
 - The claude_prompt must forbid unrelated edits and require reporting changed files and blockers.
 - If AGENTS.md exists, Claude may update it only when this story uncovers a durable repo convention or gotcha; otherwise it must not touch AGENTS.md.
 
 Repository path: {config["repo_path"]}
 AGENTS.md present: {has_agents_file}
+Configured browser_verify_command: {browser_verify_command or '(unset)'}
 
 Current story:
 {json.dumps(compact_story_summary(story), indent=2, ensure_ascii=True)}
