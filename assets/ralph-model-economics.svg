@@ -1,0 +1,37 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" fill="#F5F1E8"/>
+  <rect x="44" y="44" width="1112" height="632" rx="28" fill="#FFFDF8" stroke="#161616" stroke-width="2"/>
+  <text x="84" y="110" fill="#161616" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700">Premium supervision, cheap execution</text>
+  <text x="84" y="148" fill="#5B5B5B" font-family="'Helvetica Neue', Arial, sans-serif" font-size="24">Ralph uses a small amount of high-end reasoning to direct a large amount of low-cost implementation work.</text>
+
+  <rect x="84" y="208" width="296" height="232" rx="24" fill="#E6F0FF" stroke="#161616" stroke-width="2"/>
+  <text x="112" y="256" fill="#161616" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="700">Premium planner / reviewer</text>
+  <text x="112" y="300" fill="#161616" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700">GPT-5.5</text>
+  <text x="112" y="342" fill="#5B5B5B" font-family="'Helvetica Neue', Arial, sans-serif" font-size="21">or Claude Sonnet 4.6</text>
+  <text x="112" y="384" fill="#161616" font-family="'Helvetica Neue', Arial, sans-serif" font-size="19">Small token budget</text>
+  <text x="112" y="414" fill="#161616" font-family="'Helvetica Neue', Arial, sans-serif" font-size="19">Used for planning, review, and corrections</text>
+
+  <rect x="452" y="208" width="296" height="232" rx="24" fill="#FCE7BF" stroke="#161616" stroke-width="2"/>
+  <text x="480" y="256" fill="#161616" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="700">Cheap worker lane</text>
+  <text x="480" y="300" fill="#161616" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700">MiniMax-2.7-Highspeed</text>
+  <text x="480" y="342" fill="#5B5B5B" font-family="'Helvetica Neue', Arial, sans-serif" font-size="21">or other low-cost coding models</text>
+  <text x="480" y="384" fill="#161616" font-family="'Helvetica Neue', Arial, sans-serif" font-size="19">Large token budget</text>
+  <text x="480" y="414" fill="#161616" font-family="'Helvetica Neue', Arial, sans-serif" font-size="19">Used for bulk implementation passes</text>
+
+  <rect x="820" y="208" width="296" height="232" rx="24" fill="#DCEFD9" stroke="#161616" stroke-width="2"/>
+  <text x="848" y="256" fill="#161616" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="700">Target outcome</text>
+  <text x="848" y="300" fill="#161616" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700">Shippable quality</text>
+  <text x="848" y="342" fill="#5B5B5B" font-family="'Helvetica Neue', Arial, sans-serif" font-size="21">comparable to premium-only loops</text>
+  <text x="848" y="384" fill="#161616" font-family="'Helvetica Neue', Arial, sans-serif" font-size="19">if supervision and verification are strong</text>
+
+  <path d="M396 324H436" stroke="#161616" stroke-width="4" stroke-linecap="round"/>
+  <path d="M424 310L452 324L424 338" stroke="#161616" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M764 324H804" stroke="#161616" stroke-width="4" stroke-linecap="round"/>
+  <path d="M792 310L820 324L792 338" stroke="#161616" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="200" y="502" width="800" height="108" rx="54" fill="#161616"/>
+  <text x="244" y="556" fill="#FFFDF8" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700">MiniMax-2.7-Highspeed + GPT-5.5 oversight ~= GPT-5.5-only output quality?</text>
+  <text x="302" y="591" fill="#D8D1C5" font-family="'Helvetica Neue', Arial, sans-serif" font-size="21">That is the economic bet this workflow is designed to test and operationalize.</text>
+
+  <text x="84" y="652" fill="#5B5B5B" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20">Best single worker model today: Claude Sonnet 4.6. Best cost discipline: use premium intelligence sparingly.</text>
+</svg>

@@ -2,3 +2,8 @@
 __pycache__/
 *.pyc
 .codex-ralph/
+.pytest_cache/
+playwright-report/
+test-results/
+dist/
+node_modules/
