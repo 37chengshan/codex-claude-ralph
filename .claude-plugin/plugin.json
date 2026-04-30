@@ -1,0 +1,6 @@
+{
+  "name": "codex-claude-ralph",
+  "description": "Ralph-compatible source repo with Codex as commander and Claude Code as worker.",
+  "supportsAmp": false,
+  "supportsClaude": true
+}

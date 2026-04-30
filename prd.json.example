@@ -1,0 +1,20 @@
+{
+  "projectName": "example-project",
+  "branchName": "feature/example-story-loop",
+  "userStories": [
+    {
+      "id": "S1",
+      "title": "Set up the compatibility loop",
+      "description": "Create the public Ralph-compatible files and hidden runtime state.",
+      "acceptance_criteria": [
+        "The repository contains root-level Ralph-compatible workflow files.",
+        "The runtime can read public state and write back public passes values."
+      ],
+      "dependencies": [],
+      "suggested_tests": [
+        "python3 -m py_compile orchestrator.py browser_verify.py"
+      ],
+      "passes": false
+    }
+  ]
+}

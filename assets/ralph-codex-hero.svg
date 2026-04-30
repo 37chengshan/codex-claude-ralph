@@ -1,0 +1,76 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="88" y1="68" x2="1461" y2="830" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1020"/>
+      <stop offset="0.52" stop-color="#11233D"/>
+      <stop offset="1" stop-color="#0E5B63"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="266" y1="164" x2="1260" y2="744" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111A2E" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#0D1323" stop-opacity="0.84"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="247" y1="259" x2="1263" y2="259" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7EE7C4"/>
+      <stop offset="0.55" stop-color="#7BC9FF"/>
+      <stop offset="1" stop-color="#F5D36A"/>
+    </linearGradient>
+    <filter id="shadow" x="190" y="123" width="1224" height="659" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="18"/>
+      <feGaussianBlur stdDeviation="24"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.0117647 0 0 0 0 0.0352941 0 0 0 0 0.0901961 0 0 0 0.38 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" rx="36" fill="url(#bg)"/>
+  <circle cx="1318" cy="138" r="234" fill="#1DA6A8" fill-opacity="0.14"/>
+  <circle cx="248" cy="718" r="284" fill="#3A7CFF" fill-opacity="0.14"/>
+  <g filter="url(#shadow)">
+    <rect x="238" y="155" width="1124" height="563" rx="28" fill="url(#panel)" stroke="rgba(255,255,255,0.14)"/>
+  </g>
+  <rect x="266" y="183" width="1068" height="6" rx="3" fill="url(#accent)"/>
+  <text x="300" y="284" fill="white" font-family="SF Pro Display, Inter, Arial, sans-serif" font-size="92" font-weight="700" letter-spacing="-2">
+    Ralph, rebuilt for Codex
+  </text>
+  <text x="303" y="354" fill="#C7D2E3" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="34" font-weight="500">
+    Source-repo compatible orchestration with Codex planner/reviewer,
+  </text>
+  <text x="303" y="398" fill="#C7D2E3" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="34" font-weight="500">
+    Claude Code worker, and Playwright browser verification.
+  </text>
+  <g>
+    <rect x="302" y="474" width="198" height="92" rx="20" fill="#111C32" stroke="#7BC9FF" stroke-opacity="0.6"/>
+    <text x="338" y="520" fill="#87D4FF" font-family="SF Pro Display, Inter, Arial, sans-serif" font-size="18" font-weight="700">COMMANDER</text>
+    <text x="338" y="550" fill="white" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="32" font-weight="700">Codex</text>
+  </g>
+  <g>
+    <rect x="542" y="474" width="198" height="92" rx="20" fill="#131D2B" stroke="#7EE7C4" stroke-opacity="0.66"/>
+    <text x="578" y="520" fill="#8CF0D3" font-family="SF Pro Display, Inter, Arial, sans-serif" font-size="18" font-weight="700">WORKER</text>
+    <text x="578" y="550" fill="white" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="32" font-weight="700">Claude</text>
+  </g>
+  <g>
+    <rect x="782" y="474" width="246" height="92" rx="20" fill="#171B29" stroke="#F5D36A" stroke-opacity="0.8"/>
+    <text x="818" y="520" fill="#F8DB86" font-family="SF Pro Display, Inter, Arial, sans-serif" font-size="18" font-weight="700">VERIFIER</text>
+    <text x="818" y="550" fill="white" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="32" font-weight="700">Playwright</text>
+  </g>
+  <g>
+    <rect x="1070" y="474" width="230" height="92" rx="20" fill="#111A2B" stroke="white" stroke-opacity="0.28"/>
+    <text x="1106" y="520" fill="#D9E3F2" font-family="SF Pro Display, Inter, Arial, sans-serif" font-size="18" font-weight="700">RUNTIME</text>
+    <text x="1106" y="550" fill="white" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="32" font-weight="700">Python</text>
+  </g>
+  <path d="M500 520H542" stroke="#80CBFF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M740 520H782" stroke="#7EE7C4" stroke-width="4" stroke-linecap="round"/>
+  <path d="M1028 520H1070" stroke="#F5D36A" stroke-width="4" stroke-linecap="round"/>
+  <text x="304" y="634" fill="#E7EEF9" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="24" font-weight="500">
+    Public surface stays Ralph-like:
+  </text>
+  <text x="304" y="674" fill="#C7D2E3" font-family="SF Mono, Menlo, monospace" font-size="22">
+    ralph.sh   prompt.md   CLAUDE.md   prd.json   progress.txt
+  </text>
+  <text x="304" y="726" fill="#9FB3CC" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="18">
+    Amp intentionally unsupported. Internal state and runs live under .codex-ralph/.
+  </text>
+</svg>

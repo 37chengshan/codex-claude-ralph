@@ -1,0 +1,87 @@
+{
+  "projectName": "CityGenius Subscription + Payments Skeleton",
+  "branchName": "codex/citygenius-subscription-payments-test",
+  "userStories": [
+    {
+      "id": "S1",
+      "title": "Enable SSR Foundation",
+      "description": "Upgrade the Astro blog to an SSR-capable foundation and add the minimal configuration surface needed for Stripe-backed subscription flows.",
+      "acceptance_criteria": [
+        "Astro is switched from pure static output to a Node SSR-capable setup so server API routes can be built and run.",
+        "A shared config layer exists for Stripe-related environment variables, with secret values only read from server-side code paths.",
+        "The app can still build when Stripe variables are missing, exposing a non-broken fallback state instead of crashing."
+      ],
+      "dependencies": [],
+      "suggested_tests": [
+        "npm run build",
+        "rg '@astrojs/node|output:\\s*[\"\\x27]server[\"\\x27]' astro.config.mjs package.json -n",
+        "test -f src/env.d.ts || test -f src/lib/stripe/config.ts || test -f src/config/stripe.ts"
+      ],
+      "passes": true
+    },
+    {
+      "id": "S2",
+      "title": "Add Checkout Session API",
+      "description": "Implement the real server-side Stripe Checkout session creation logic as the core payment entry point.",
+      "acceptance_criteria": [
+        "A server endpoint exists to create Stripe Checkout Sessions for subscriptions.",
+        "The endpoint uses Stripe price IDs for monthly and yearly plans and sets `mode: subscription`.",
+        "The endpoint reads `STRIPE_SECRET_KEY` only on the server and does not introduce any email-lookup-based subscription management flow.",
+        "Success and cancel URLs are derived from `SITE_URL` or an equivalent server-safe base URL strategy."
+      ],
+      "dependencies": [
+        "S1"
+      ],
+      "suggested_tests": [
+        "npm run build",
+        "test -f src/pages/api/stripe/checkout.ts || test -f src/pages/api/checkout.ts",
+        "rg 'mode:\\s*[\"\\x27]subscription[\"\\x27]' src/pages/api src/lib src/config -n",
+        "rg 'STRIPE_PRICE_MONTHLY|STRIPE_PRICE_YEARLY|STRIPE_SECRET_KEY' src/pages/api src/lib src/config -n"
+      ],
+      "passes": true
+    },
+    {
+      "id": "S3",
+      "title": "Build Homepage Subscription Section",
+      "description": "Add the public subscription area on the homepage, including monthly/yearly purchase actions, a secure billing-management entry, and a graceful unconfigured state.",
+      "acceptance_criteria": [
+        "The homepage includes a visible subscription section that matches the site's existing editorial or magazine design language instead of a SaaS dashboard pattern.",
+        "The page contains stable markers `data-subscribe-tier=\"monthly\"`, `data-subscribe-tier=\"yearly\"`, and `data-billing-portal-link`.",
+        "The UI clearly explains that the subscription supports ongoing writing and updates, and distinguishes monthly from yearly plans.",
+        "When Stripe env vars are not configured, the section shows a graceful fallback message without broken actions or an ugly placeholder.",
+        "The subscription management entry uses the hosted Stripe customer portal login link from configuration, or an equally safe hosted flow, without asking users to enter an email for lookup."
+      ],
+      "dependencies": [
+        "S1",
+        "S2"
+      ],
+      "suggested_tests": [
+        "npm run build",
+        "rg 'data-subscribe-tier=\"monthly\"' src -n",
+        "rg 'data-subscribe-tier=\"yearly\"' src -n",
+        "rg 'data-billing-portal-link' src -n"
+      ],
+      "passes": false
+    },
+    {
+      "id": "S4",
+      "title": "Document Env and Smoke Verification",
+      "description": "Document the local configuration and testing path so another developer can run and verify the subscription skeleton without guessing.",
+      "acceptance_criteria": [
+        "README or a dedicated local setup doc explains how to configure `STRIPE_SECRET_KEY`, `STRIPE_PRICE_MONTHLY`, `STRIPE_PRICE_YEARLY`, `STRIPE_CUSTOMER_PORTAL_URL`, and `SITE_URL`.",
+        "The documentation explains the local test path for the homepage subscription section and the checkout endpoint, including what fallback behavior to expect without real Stripe secrets.",
+        "The documented verification path includes at least the default build check and a smoke check for the required homepage markers and secure management-link approach."
+      ],
+      "dependencies": [
+        "S2",
+        "S3"
+      ],
+      "suggested_tests": [
+        "npm run build",
+        "rg 'STRIPE_SECRET_KEY|STRIPE_PRICE_MONTHLY|STRIPE_PRICE_YEARLY|STRIPE_CUSTOMER_PORTAL_URL|SITE_URL' README.md docs src -n",
+        "rg 'data-subscribe-tier=\"monthly\"|data-subscribe-tier=\"yearly\"|data-billing-portal-link' README.md docs -n"
+      ],
+      "passes": false
+    }
+  ]
+}

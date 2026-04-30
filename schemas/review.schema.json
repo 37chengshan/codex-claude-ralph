@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["complete", "reason", "progress_entry", "remaining_work"],
+  "properties": {
+    "complete": {
+      "type": "boolean"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "progress_entry": {
+      "type": "string"
+    },
+    "remaining_work": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

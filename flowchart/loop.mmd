@@ -1,0 +1,9 @@
+flowchart TD
+    A["prompt.md / prd.json"] --> B["Codex planner"]
+    B --> C["Claude worker"]
+    C --> D["Local tests and browser verification"]
+    D --> E["Codex reviewer"]
+    E --> F["Export root prd.json + append progress.txt"]
+    F --> G{"More stories?"}
+    G -->|Yes| B
+    G -->|No| H["Done"]
