@@ -1,4 +1,6 @@
-# Ralph ![Ralph Codex Hero](assets/ralph-codex-hero.svg?cache=20260430-v2)
+# Ralph
+
+![Ralph Model Economics](assets/ralph-economics-showcase-v4.svg)
 
 Ralph is an autonomous AI agent loop. This repository recreates the original [snarktank/ralph](https://github.com/snarktank/ralph) source-repo shape, but fixes the runtime policy to:
 
@@ -7,6 +9,8 @@ Ralph is an autonomous AI agent loop. This repository recreates the original [sn
 - **Playwright** as the primary browser verifier for UI stories
 
 Each iteration is still a fresh story-level loop. Public memory persists through git history, `progress.txt`, and root `prd.json`. Internal state, archives, locks, and run artifacts live under `.codex-ralph/`.
+
+![Ralph Orchestration](assets/ralph-orchestration-showcase-v4.svg)
 
 **Amp is intentionally unsupported in this fork.**
 
@@ -27,8 +31,6 @@ In practice, this means you reserve premium reasoning for the parts that matter 
 - final quality gates
 
 And you push repetitive or high-volume code generation into the cheaper worker lane.
-
-![Ralph Model Economics](assets/ralph-model-economics.svg?cache=20260430-v2)
 
 If you only care about absolute worker quality and not cost, `Claude Sonnet 4.6` is still the best fit for the worker role. Ralph exists for the opposite case: keep quality high while reducing how much premium-model spend is required to ship.
 
@@ -157,7 +159,7 @@ Ralph will:
 
 ## Flowchart
 
-![Ralph Codex Flowchart](assets/ralph-codex-flowchart.svg?cache=20260430-v2)
+![Ralph Runtime Engine](assets/ralph-runtime-engine-v4.svg)
 
 The source loop definition lives in [flowchart/loop.mmd](flowchart/loop.mmd).
 
