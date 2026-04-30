@@ -1,73 +1,105 @@
-<svg width="1600" height="720" viewBox="0 0 1600 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Codex Ralph runtime loop concept image</title>
+  <desc id="desc">A concept flowchart showing a fresh-context Ralph iteration from PRD input through Codex planning, worker execution, tests, review, persisted state, and the next story loop.</desc>
   <defs>
-    <linearGradient id="flowbg" x1="96" y1="64" x2="1494" y2="630" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FCFCFA"/>
-      <stop offset="1" stop-color="#EEF4FF"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07101F"/>
+      <stop offset="0.52" stop-color="#10233C"/>
+      <stop offset="1" stop-color="#07101F"/>
     </linearGradient>
-    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#3C7DFF"/>
-      <stop offset="1" stop-color="#59B8FF"/>
+    <linearGradient id="nodeA" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#8FD6FF"/>
+      <stop offset="1" stop-color="#5367FF"/>
     </linearGradient>
-    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#00A6A6"/>
-      <stop offset="1" stop-color="#76E3C1"/>
+    <linearGradient id="nodeB" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#89F2CC"/>
+      <stop offset="1" stop-color="#13A06F"/>
     </linearGradient>
-    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#C38B16"/>
-      <stop offset="1" stop-color="#F0D068"/>
+    <linearGradient id="nodeC" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFE08A"/>
+      <stop offset="1" stop-color="#F97316"/>
     </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="20" stdDeviation="22" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <marker id="arrowBlue" markerWidth="18" markerHeight="18" refX="12" refY="9" orient="auto">
+      <path d="M2 2L15 9L2 16" fill="none" stroke="#8FD6FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="18" markerHeight="18" refX="12" refY="9" orient="auto">
+      <path d="M2 2L15 9L2 16" fill="none" stroke="#89F2CC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrowGold" markerWidth="18" markerHeight="18" refX="12" refY="9" orient="auto">
+      <path d="M2 2L15 9L2 16" fill="none" stroke="#FFE08A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
   </defs>
-  <rect width="1600" height="720" rx="28" fill="url(#flowbg)"/>
-  <text x="110" y="112" fill="#0E1830" font-family="SF Pro Display, Inter, Arial, sans-serif" font-size="52" font-weight="700">
-    Codex Ralph Runtime Loop
-  </text>
-  <text x="112" y="156" fill="#51627B" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="24">
-    Fresh-context story loop with public Ralph files on the outside and hidden runtime state underneath.
-  </text>
-  <g>
-    <rect x="112" y="244" width="250" height="96" rx="22" fill="white" stroke="#CAD7EE" stroke-width="2"/>
-    <text x="144" y="286" fill="#315EC9" font-family="SF Pro Display, Inter, Arial, sans-serif" font-size="18" font-weight="700">INPUT</text>
-    <text x="144" y="318" fill="#09162B" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="30" font-weight="700">prompt.md / prd.json</text>
+
+  <rect width="1600" height="900" rx="38" fill="url(#bg)"/>
+  <g opacity="0.12">
+    <circle cx="802" cy="454" r="355" stroke="#B5C7FF" stroke-width="2"/>
+    <circle cx="802" cy="454" r="252" stroke="#B5C7FF" stroke-width="2"/>
+    <circle cx="802" cy="454" r="150" stroke="#B5C7FF" stroke-width="2"/>
   </g>
-  <g>
-    <rect x="416" y="244" width="210" height="96" rx="22" fill="#EDF4FF" stroke="#8DB5FF" stroke-width="2"/>
-    <text x="448" y="286" fill="#315EC9" font-family="SF Pro Display, Inter, Arial, sans-serif" font-size="18" font-weight="700">PLANNER</text>
-    <text x="448" y="318" fill="#09162B" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="30" font-weight="700">Codex</text>
+
+  <text x="110" y="118" fill="#F8FBFF" font-family="Inter, SF Pro Display, Arial, sans-serif" font-size="64" font-weight="850" letter-spacing="-1.8">Fresh-Context Runtime Loop</text>
+  <text x="114" y="168" fill="#AFC0D8" font-family="Inter, SF Pro Text, Arial, sans-serif" font-size="26" font-weight="500">Each story is isolated; only verified evidence and public progress survive into the next iteration.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="138" y="306" width="250" height="142" rx="30" fill="#0B1830" stroke="#8FD6FF" stroke-width="2"/>
+    <circle cx="188" cy="360" r="24" fill="url(#nodeA)"/>
+    <text x="226" y="360" fill="#91D9FF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="850">INPUT</text>
+    <text x="174" y="405" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="850">PRD / prompt</text>
   </g>
-  <g>
-    <rect x="680" y="244" width="210" height="96" rx="22" fill="#EDFBF7" stroke="#87DEC5" stroke-width="2"/>
-    <text x="712" y="286" fill="#118A7E" font-family="SF Pro Display, Inter, Arial, sans-serif" font-size="18" font-weight="700">WORKER</text>
-    <text x="712" y="318" fill="#09162B" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="30" font-weight="700">Claude Code</text>
+
+  <g filter="url(#shadow)">
+    <rect x="470" y="222" width="250" height="142" rx="30" fill="#0B1830" stroke="#8FD6FF" stroke-width="2"/>
+    <circle cx="520" cy="276" r="24" fill="url(#nodeA)"/>
+    <text x="558" y="276" fill="#91D9FF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="850">PLAN</text>
+    <text x="516" y="321" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="850">Codex brief</text>
   </g>
-  <g>
-    <rect x="944" y="244" width="252" height="96" rx="22" fill="#FFF8E7" stroke="#E6C25D" stroke-width="2"/>
-    <text x="976" y="286" fill="#A96E05" font-family="SF Pro Display, Inter, Arial, sans-serif" font-size="18" font-weight="700">VERIFY</text>
-    <text x="976" y="318" fill="#09162B" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="30" font-weight="700">Tests + Playwright</text>
+
+  <g filter="url(#shadow)">
+    <rect x="880" y="222" width="250" height="142" rx="30" fill="#092417" stroke="#89F2CC" stroke-width="2"/>
+    <circle cx="930" cy="276" r="24" fill="url(#nodeB)"/>
+    <text x="968" y="276" fill="#9DF6D3" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="850">EXECUTE</text>
+    <text x="920" y="321" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="850">Worker pass</text>
   </g>
-  <g>
-    <rect x="1250" y="244" width="214" height="96" rx="22" fill="#F2F6FC" stroke="#C7D2E3" stroke-width="2"/>
-    <text x="1282" y="286" fill="#5D6D86" font-family="SF Pro Display, Inter, Arial, sans-serif" font-size="18" font-weight="700">REVIEWER</text>
-    <text x="1282" y="318" fill="#09162B" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="30" font-weight="700">Codex</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1212" y="306" width="250" height="142" rx="30" fill="#241807" stroke="#FFE08A" stroke-width="2"/>
+    <circle cx="1262" cy="360" r="24" fill="url(#nodeC)"/>
+    <text x="1300" y="360" fill="#FFE08A" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="850">VERIFY</text>
+    <text x="1254" y="405" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="850">Tests + UI</text>
   </g>
-  <path d="M362 292H416" stroke="url(#blue)" stroke-width="4" stroke-linecap="round"/>
-  <path d="M626 292H680" stroke="url(#teal)" stroke-width="4" stroke-linecap="round"/>
-  <path d="M890 292H944" stroke="url(#gold)" stroke-width="4" stroke-linecap="round"/>
-  <path d="M1196 292H1250" stroke="#AEBFD6" stroke-width="4" stroke-linecap="round"/>
-  <g>
-    <rect x="444" y="438" width="712" height="164" rx="26" fill="white" stroke="#D7E1F0" stroke-width="2"/>
-    <text x="484" y="490" fill="#0E1830" font-family="SF Pro Display, Inter, Arial, sans-serif" font-size="34" font-weight="700">
-      Persisted between iterations
-    </text>
-    <text x="486" y="536" fill="#52637A" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="24">
-      Git history, progress.txt, root prd.json, .codex-ralph/state.json, .codex-ralph/runs/
-    </text>
-    <text x="486" y="576" fill="#52637A" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="24">
-      Each story runs in fresh context. Only bounded evidence is fed forward.
-    </text>
+
+  <g filter="url(#shadow)">
+    <rect x="880" y="558" width="250" height="142" rx="30" fill="#0B1830" stroke="#C6D7F4" stroke-width="2"/>
+    <circle cx="930" cy="612" r="24" fill="#D8E7FF"/>
+    <text x="968" y="612" fill="#D8E7FF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="850">REVIEW</text>
+    <text x="924" y="657" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="850">Codex gate</text>
   </g>
-  <path d="M1358 340V406C1358 424 1344 438 1326 438H1156" stroke="#93A7C4" stroke-width="4" stroke-linecap="round"/>
-  <path d="M444 520H314C278 520 250 492 250 456V340" stroke="#93A7C4" stroke-width="4" stroke-linecap="round"/>
-  <path d="M250 340L238 358" stroke="#93A7C4" stroke-width="4" stroke-linecap="round"/>
-  <path d="M250 340L262 358" stroke="#93A7C4" stroke-width="4" stroke-linecap="round"/>
-  <text x="1136" y="420" fill="#52637A" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="20">append progress + export public state</text>
+
+  <g filter="url(#shadow)">
+    <rect x="470" y="558" width="250" height="142" rx="30" fill="#111827" stroke="#C6D7F4" stroke-width="2"/>
+    <circle cx="520" cy="612" r="24" fill="#D8E7FF"/>
+    <text x="558" y="612" fill="#D8E7FF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="850">PERSIST</text>
+    <text x="508" y="657" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="850">State + runs</text>
+  </g>
+
+  <path d="M388 356C420 316 430 304 470 296" stroke="#8FD6FF" stroke-width="6" stroke-linecap="round" marker-end="url(#arrowBlue)"/>
+  <path d="M720 292H880" stroke="#89F2CC" stroke-width="6" stroke-linecap="round" marker-end="url(#arrowGreen)"/>
+  <path d="M1130 296C1175 304 1198 324 1212 356" stroke="#FFE08A" stroke-width="6" stroke-linecap="round" marker-end="url(#arrowGold)"/>
+  <path d="M1336 448C1326 552 1242 630 1130 630" stroke="#FFE08A" stroke-width="6" stroke-linecap="round" marker-end="url(#arrowGold)"/>
+  <path d="M880 630H720" stroke="#D8E7FF" stroke-width="6" stroke-linecap="round" marker-end="url(#arrowBlue)"/>
+  <path d="M470 630C300 618 222 540 238 448" stroke="#D8E7FF" stroke-width="6" stroke-linecap="round" stroke-dasharray="16 18" marker-end="url(#arrowBlue)"/>
+
+  <g transform="translate(548 402)" filter="url(#shadow)">
+    <rect width="504" height="116" rx="34" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.26" stroke-width="2"/>
+    <text x="40" y="47" fill="#EAF2FF" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="850">Bounded evidence crosses the boundary</text>
+    <text x="40" y="84" fill="#AFC0D8" font-family="Inter, Arial, sans-serif" font-size="21">diffs · test output · browser verification · progress.txt</text>
+  </g>
+
+  <g transform="translate(120 764)">
+    <rect width="1360" height="68" rx="34" fill="#030711" stroke="#49627F" stroke-opacity="0.6"/>
+    <text x="56" y="43" fill="#D8E7FF" font-family="SF Mono, Menlo, Consolas, monospace" font-size="23">public: ralph.sh / prd.json / progress.txt     hidden: .codex-ralph/state.json / runs / archive</text>
+  </g>
 </svg>
