@@ -1,105 +1,83 @@
-<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Codex Ralph runtime loop concept image</title>
-  <desc id="desc">A concept flowchart showing a fresh-context Ralph iteration from PRD input through Codex planning, worker execution, tests, review, persisted state, and the next story loop.</desc>
+<svg width="1600" height="980" viewBox="0 0 1600 980" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Codex visible command loop</title>
+  <desc id="desc">A v10 workflow diagram showing demand alignment, task graph approval, visible Claude terminal workers, Codex review, rework, merge, and final audit.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#07101F"/>
-      <stop offset="0.52" stop-color="#10233C"/>
-      <stop offset="1" stop-color="#07101F"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="980" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8F5EE"/>
+      <stop offset="1" stop-color="#E9F1EF"/>
     </linearGradient>
-    <linearGradient id="nodeA" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#8FD6FF"/>
-      <stop offset="1" stop-color="#5367FF"/>
-    </linearGradient>
-    <linearGradient id="nodeB" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#89F2CC"/>
-      <stop offset="1" stop-color="#13A06F"/>
-    </linearGradient>
-    <linearGradient id="nodeC" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#FFE08A"/>
-      <stop offset="1" stop-color="#F97316"/>
-    </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
-      <feDropShadow dx="0" dy="20" stdDeviation="22" flood-color="#000000" flood-opacity="0.35"/>
+    <filter id="shadow" x="0" y="0" width="1600" height="980" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#172033" flood-opacity="0.12"/>
     </filter>
-    <marker id="arrowBlue" markerWidth="18" markerHeight="18" refX="12" refY="9" orient="auto">
-      <path d="M2 2L15 9L2 16" fill="none" stroke="#8FD6FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-    </marker>
-    <marker id="arrowGreen" markerWidth="18" markerHeight="18" refX="12" refY="9" orient="auto">
-      <path d="M2 2L15 9L2 16" fill="none" stroke="#89F2CC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-    </marker>
-    <marker id="arrowGold" markerWidth="18" markerHeight="18" refX="12" refY="9" orient="auto">
-      <path d="M2 2L15 9L2 16" fill="none" stroke="#FFE08A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-    </marker>
   </defs>
-
-  <rect width="1600" height="900" rx="38" fill="url(#bg)"/>
-  <g opacity="0.12">
-    <circle cx="802" cy="454" r="355" stroke="#B5C7FF" stroke-width="2"/>
-    <circle cx="802" cy="454" r="252" stroke="#B5C7FF" stroke-width="2"/>
-    <circle cx="802" cy="454" r="150" stroke="#B5C7FF" stroke-width="2"/>
-  </g>
-
-  <text x="110" y="118" fill="#F8FBFF" font-family="Inter, SF Pro Display, Arial, sans-serif" font-size="64" font-weight="850" letter-spacing="-1.8">Fresh-Context Runtime Loop</text>
-  <text x="114" y="168" fill="#AFC0D8" font-family="Inter, SF Pro Text, Arial, sans-serif" font-size="26" font-weight="500">Each story is isolated; only verified evidence and public progress survive into the next iteration.</text>
+  <rect width="1600" height="980" rx="34" fill="url(#bg)"/>
+  <text x="96" y="102" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="56" font-weight="700">Codex visible command loop</text>
+  <text x="100" y="148" fill="#5B6575" font-family="'Helvetica Neue', Arial, sans-serif" font-size="24">Demand alignment, task DAG, visible Claude terminal workers, Codex review, rework, merge, final audit.</text>
 
   <g filter="url(#shadow)">
-    <rect x="138" y="306" width="250" height="142" rx="30" fill="#0B1830" stroke="#8FD6FF" stroke-width="2"/>
-    <circle cx="188" cy="360" r="24" fill="url(#nodeA)"/>
-    <text x="226" y="360" fill="#91D9FF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="850">INPUT</text>
-    <text x="174" y="405" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="850">PRD / prompt</text>
+    <rect x="96" y="214" width="260" height="126" rx="12" fill="#FFFFFF" stroke="#D9D4C8" stroke-width="2"/>
+    <text x="126" y="256" fill="#B74E2C" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700">01 INTAKE</text>
+    <text x="126" y="294" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="31" font-weight="700">User goal</text>
+    <text x="126" y="322" fill="#5B6575" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18">task, bug, feature</text>
   </g>
+  <g filter="url(#shadow)">
+    <rect x="438" y="214" width="300" height="126" rx="12" fill="#111827"/>
+    <text x="468" y="256" fill="#F6C85F" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700">02 ALIGNMENT</text>
+    <text x="468" y="294" fill="#FFFFFF" font-family="Georgia, 'Times New Roman', serif" font-size="31" font-weight="700">One question</text>
+    <text x="468" y="322" fill="#C9D2E3" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18">full readiness scorecard</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="820" y="214" width="300" height="126" rx="12" fill="#FFFFFF" stroke="#D9D4C8" stroke-width="2"/>
+    <text x="850" y="256" fill="#2B7A70" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700">03 TASK GRAPH</text>
+    <text x="850" y="294" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="31" font-weight="700">DAG approval</text>
+    <text x="850" y="322" fill="#5B6575" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18">scope, deps, verification</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="1202" y="214" width="300" height="126" rx="12" fill="#FFFFFF" stroke="#D9D4C8" stroke-width="2"/>
+    <text x="1232" y="256" fill="#345FD8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700">04 TERMINAL WORKERS</text>
+    <text x="1232" y="294" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="31" font-weight="700">Claude CLI</text>
+    <text x="1232" y="322" fill="#5B6575" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18">one worktree per task</text>
+  </g>
+
+  <path d="M356 277H438" stroke="#111827" stroke-width="4" stroke-linecap="round"/>
+  <path d="M738 277H820" stroke="#111827" stroke-width="4" stroke-linecap="round"/>
+  <path d="M1120 277H1202" stroke="#111827" stroke-width="4" stroke-linecap="round"/>
 
   <g filter="url(#shadow)">
-    <rect x="470" y="222" width="250" height="142" rx="30" fill="#0B1830" stroke="#8FD6FF" stroke-width="2"/>
-    <circle cx="520" cy="276" r="24" fill="url(#nodeA)"/>
-    <text x="558" y="276" fill="#91D9FF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="850">PLAN</text>
-    <text x="516" y="321" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="850">Codex brief</text>
+    <rect x="1202" y="500" width="300" height="126" rx="12" fill="#111827"/>
+    <text x="1232" y="542" fill="#F6C85F" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700">05 CODEX REVIEW</text>
+    <text x="1232" y="580" fill="#FFFFFF" font-family="Georgia, 'Times New Roman', serif" font-size="31" font-weight="700">Pass or rework</text>
+    <text x="1232" y="608" fill="#C9D2E3" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18">diff, tests, Playwright</text>
   </g>
-
   <g filter="url(#shadow)">
-    <rect x="880" y="222" width="250" height="142" rx="30" fill="#092417" stroke="#89F2CC" stroke-width="2"/>
-    <circle cx="930" cy="276" r="24" fill="url(#nodeB)"/>
-    <text x="968" y="276" fill="#9DF6D3" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="850">EXECUTE</text>
-    <text x="920" y="321" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="850">Worker pass</text>
+    <rect x="820" y="500" width="300" height="126" rx="12" fill="#FFFFFF" stroke="#D9D4C8" stroke-width="2"/>
+    <text x="850" y="542" fill="#B74E2C" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700">06 REWORK LOOP</text>
+    <text x="850" y="580" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="31" font-weight="700">Max 3 tries</text>
+    <text x="850" y="608" fill="#5B6575" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18">then handoff decision</text>
   </g>
-
   <g filter="url(#shadow)">
-    <rect x="1212" y="306" width="250" height="142" rx="30" fill="#241807" stroke="#FFE08A" stroke-width="2"/>
-    <circle cx="1262" cy="360" r="24" fill="url(#nodeC)"/>
-    <text x="1300" y="360" fill="#FFE08A" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="850">VERIFY</text>
-    <text x="1254" y="405" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="850">Tests + UI</text>
+    <rect x="438" y="500" width="300" height="126" rx="12" fill="#FFFFFF" stroke="#D9D4C8" stroke-width="2"/>
+    <text x="468" y="542" fill="#2B7A70" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700">07 MERGE</text>
+    <text x="468" y="580" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="31" font-weight="700">Integration</text>
+    <text x="468" y="608" fill="#5B6575" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18">approved task branches</text>
   </g>
-
   <g filter="url(#shadow)">
-    <rect x="880" y="558" width="250" height="142" rx="30" fill="#0B1830" stroke="#C6D7F4" stroke-width="2"/>
-    <circle cx="930" cy="612" r="24" fill="#D8E7FF"/>
-    <text x="968" y="612" fill="#D8E7FF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="850">REVIEW</text>
-    <text x="924" y="657" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="850">Codex gate</text>
+    <rect x="96" y="500" width="260" height="126" rx="12" fill="#FFFFFF" stroke="#D9D4C8" stroke-width="2"/>
+    <text x="126" y="542" fill="#345FD8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700">08 FINAL AUDIT</text>
+    <text x="126" y="580" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="31" font-weight="700">Deliver</text>
+    <text x="126" y="608" fill="#5B6575" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18">only after Codex passes</text>
   </g>
 
-  <g filter="url(#shadow)">
-    <rect x="470" y="558" width="250" height="142" rx="30" fill="#111827" stroke="#C6D7F4" stroke-width="2"/>
-    <circle cx="520" cy="612" r="24" fill="#D8E7FF"/>
-    <text x="558" y="612" fill="#D8E7FF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="850">PERSIST</text>
-    <text x="508" y="657" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="850">State + runs</text>
-  </g>
+  <path d="M1352 340V500" stroke="#111827" stroke-width="4" stroke-linecap="round"/>
+  <path d="M1202 563H1120" stroke="#111827" stroke-width="4" stroke-linecap="round"/>
+  <path d="M820 563H738" stroke="#111827" stroke-width="4" stroke-linecap="round"/>
+  <path d="M438 563H356" stroke="#111827" stroke-width="4" stroke-linecap="round"/>
+  <path d="M970 500V428C970 406 988 388 1010 388H1352C1374 388 1392 406 1392 428V500" stroke="#B74E2C" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 12"/>
+  <text x="1040" y="432" fill="#B74E2C" font-family="'Helvetica Neue', Arial, sans-serif" font-size="19" font-weight="700">failed review returns to Claude</text>
 
-  <path d="M388 356C420 316 430 304 470 296" stroke="#8FD6FF" stroke-width="6" stroke-linecap="round" marker-end="url(#arrowBlue)"/>
-  <path d="M720 292H880" stroke="#89F2CC" stroke-width="6" stroke-linecap="round" marker-end="url(#arrowGreen)"/>
-  <path d="M1130 296C1175 304 1198 324 1212 356" stroke="#FFE08A" stroke-width="6" stroke-linecap="round" marker-end="url(#arrowGold)"/>
-  <path d="M1336 448C1326 552 1242 630 1130 630" stroke="#FFE08A" stroke-width="6" stroke-linecap="round" marker-end="url(#arrowGold)"/>
-  <path d="M880 630H720" stroke="#D8E7FF" stroke-width="6" stroke-linecap="round" marker-end="url(#arrowBlue)"/>
-  <path d="M470 630C300 618 222 540 238 448" stroke="#D8E7FF" stroke-width="6" stroke-linecap="round" stroke-dasharray="16 18" marker-end="url(#arrowBlue)"/>
-
-  <g transform="translate(548 402)" filter="url(#shadow)">
-    <rect width="504" height="116" rx="34" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.26" stroke-width="2"/>
-    <text x="40" y="47" fill="#EAF2FF" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="850">Bounded evidence crosses the boundary</text>
-    <text x="40" y="84" fill="#AFC0D8" font-family="Inter, Arial, sans-serif" font-size="21">diffs · test output · browser verification · progress.txt</text>
-  </g>
-
-  <g transform="translate(120 764)">
-    <rect width="1360" height="68" rx="34" fill="#030711" stroke="#49627F" stroke-opacity="0.6"/>
-    <text x="56" y="43" fill="#D8E7FF" font-family="SF Mono, Menlo, Consolas, monospace" font-size="23">public: ralph.sh / prd.json / progress.txt     hidden: .codex-ralph/state.json / runs / archive</text>
+  <g>
+    <rect x="96" y="750" width="1406" height="108" rx="12" fill="#FFFFFF" stroke="#D9D4C8"/>
+    <text x="132" y="794" fill="#111827" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="22">.codex-ralph/state.json · task_graph.json · events.jsonl · runs/&lt;run_id&gt;/tasks/&lt;task_id&gt;/</text>
+    <text x="132" y="834" fill="#5B6575" font-family="'Helvetica Neue', Arial, sans-serif" font-size="21">Codex remains visible in the current conversation. Runtime stores evidence; it does not replace Codex review.</text>
   </g>
 </svg>

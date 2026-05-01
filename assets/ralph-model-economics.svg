@@ -1,94 +1,59 @@
-<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Model economics concept image</title>
-  <desc id="desc">A concept diagram showing MiniMax-2.7H plus GPT-5.5 oversight approaching GPT-5.5-only output quality with lower premium token cost.</desc>
+<svg width="1600" height="920" viewBox="0 0 1600 920" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Premium supervision with low cost execution</title>
+  <desc id="desc">A cost model diagram showing a small premium planner and reviewer lane supervising large low-cost worker execution toward shippable output quality.</desc>
   <defs>
-    <linearGradient id="paper" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFF7E8"/>
-      <stop offset="0.52" stop-color="#F6FBFF"/>
-      <stop offset="1" stop-color="#ECF7F1"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="920" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14171D"/>
+      <stop offset="1" stop-color="#26302C"/>
     </linearGradient>
-    <linearGradient id="premium" x1="266" y1="216" x2="560" y2="574" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#7AC7FF"/>
-      <stop offset="1" stop-color="#6457FF"/>
-    </linearGradient>
-    <linearGradient id="cheap" x1="616" y1="248" x2="938" y2="602" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#7EF0C1"/>
-      <stop offset="1" stop-color="#13A06F"/>
-    </linearGradient>
-    <linearGradient id="quality" x1="1050" y1="238" x2="1360" y2="600" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFE38A"/>
-      <stop offset="1" stop-color="#F97316"/>
-    </linearGradient>
-    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="130%">
-      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#0B1220" flood-opacity="0.18"/>
-    </filter>
-    <filter id="halo" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="15" result="b"/>
-      <feColorMatrix in="b" type="matrix" values="0 0 0 0 1 0 0 0 0 0.72 0 0 0 0 0.2 0 0 0 0.72 0"/>
-      <feBlend in="SourceGraphic"/>
+    <filter id="shadow" x="0" y="0" width="1600" height="920" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.22"/>
     </filter>
   </defs>
+  <rect width="1600" height="920" rx="34" fill="url(#bg)"/>
+  <text x="96" y="108" fill="#F9F2E7" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="700">Premium supervision, low-cost execution</text>
+  <text x="100" y="154" fill="#C8D0C8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="24">Spend premium reasoning on planning, review, and correction. Spend worker tokens on bulk implementation.</text>
 
-  <rect width="1600" height="900" rx="38" fill="url(#paper)"/>
-  <circle cx="1240" cy="126" r="238" fill="#86E6C1" fill-opacity="0.18"/>
-  <circle cx="326" cy="732" r="280" fill="#6AA5FF" fill-opacity="0.15"/>
-
-  <text x="128" y="126" fill="#101828" font-family="Inter, SF Pro Display, Arial, sans-serif" font-size="62" font-weight="850" letter-spacing="-1.8">Model Economics</text>
-  <text x="130" y="178" fill="#526179" font-family="Inter, SF Pro Text, Arial, sans-serif" font-size="27" font-weight="500">Use a little premium reasoning to command a lot of cheap execution.</text>
-
-  <g filter="url(#cardShadow)">
-    <rect x="116" y="246" width="410" height="392" rx="34" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
-    <rect x="146" y="276" width="350" height="126" rx="28" fill="url(#premium)"/>
-    <text x="182" y="326" fill="#F8FBFF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">PREMIUM OVERSEER</text>
-    <text x="182" y="372" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="900">GPT-5.5</text>
-    <text x="154" y="462" fill="#101828" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="800">Small token budget</text>
-    <text x="154" y="504" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="22">decompose · review · fix</text>
-    <text x="154" y="546" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="22">spend only where judgment matters</text>
-    <g transform="translate(154 582)">
-      <rect width="304" height="20" rx="10" fill="#E8EEF7"/>
-      <rect width="82" height="20" rx="10" fill="#6457FF"/>
-      <text x="324" y="18" fill="#64748B" font-family="Inter, Arial, sans-serif" font-size="18">premium tokens</text>
-    </g>
+  <g filter="url(#shadow)">
+    <rect x="96" y="238" width="396" height="286" rx="16" fill="#F7F1E7"/>
+    <text x="132" y="286" fill="#8A3D25" font-family="'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700">PREMIUM LANE</text>
+    <text x="132" y="340" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700">GPT-5.5</text>
+    <text x="132" y="384" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700">or Claude Sonnet 4.6</text>
+    <line x1="132" y1="418" x2="456" y2="418" stroke="#D9CBBB"/>
+    <text x="132" y="458" fill="#4F5B67" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22">Small token budget</text>
+    <text x="132" y="494" fill="#4F5B67" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22">Planner, reviewer, repair judge</text>
   </g>
 
-  <g filter="url(#cardShadow)">
-    <rect x="594" y="246" width="410" height="392" rx="34" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
-    <rect x="624" y="276" width="350" height="126" rx="28" fill="url(#cheap)"/>
-    <text x="660" y="326" fill="#EFFFF8" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">CHEAP WORKER LANE</text>
-    <text x="660" y="372" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="43" font-weight="900">MiniMax-2.7H</text>
-    <text x="632" y="462" fill="#101828" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="800">Large token budget</text>
-    <text x="632" y="504" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="22">bulk edits · refactors · implementation</text>
-    <text x="632" y="546" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="22">cheap passes under premium control</text>
-    <g transform="translate(632 582)">
-      <rect width="304" height="20" rx="10" fill="#E8EEF7"/>
-      <rect width="264" height="20" rx="10" fill="#16A874"/>
-      <text x="324" y="18" fill="#64748B" font-family="Inter, Arial, sans-serif" font-size="18">cheap tokens</text>
-    </g>
+  <g filter="url(#shadow)">
+    <rect x="602" y="238" width="396" height="286" rx="16" fill="#F4C95D"/>
+    <text x="638" y="286" fill="#5F4104" font-family="'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700">WORKER LANE</text>
+    <text x="638" y="340" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700">MiniMax-2.7</text>
+    <text x="638" y="384" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700">HighSpeed</text>
+    <line x1="638" y1="418" x2="962" y2="418" stroke="#A77D16"/>
+    <text x="638" y="458" fill="#3B2D10" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22">Large token budget</text>
+    <text x="638" y="494" fill="#3B2D10" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22">Bulk coding and rework passes</text>
   </g>
 
-  <g filter="url(#cardShadow)">
-    <rect x="1072" y="246" width="410" height="392" rx="34" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
-    <rect x="1102" y="276" width="350" height="126" rx="28" fill="url(#quality)"/>
-    <text x="1138" y="326" fill="#FFF7ED" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">QUALITY TARGET</text>
-    <text x="1138" y="372" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="43" font-weight="900">GPT-5.5?</text>
-    <text x="1110" y="462" fill="#101828" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="800">Comparable shipped output</text>
-    <text x="1110" y="504" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="22">when tests + review catch drift</text>
-    <text x="1110" y="546" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="22">not magic: orchestration is the multiplier</text>
-    <g transform="translate(1110 582)">
-      <rect width="304" height="20" rx="10" fill="#E8EEF7"/>
-      <rect width="270" height="20" rx="10" fill="#F97316"/>
-      <text x="324" y="18" fill="#64748B" font-family="Inter, Arial, sans-serif" font-size="18">quality bar</text>
-    </g>
+  <g filter="url(#shadow)">
+    <rect x="1108" y="238" width="396" height="286" rx="16" fill="#CFE8DF"/>
+    <text x="1144" y="286" fill="#1C695F" font-family="'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700">TARGET</text>
+    <text x="1144" y="340" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700">Shippable</text>
+    <text x="1144" y="384" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700">quality</text>
+    <line x1="1144" y1="418" x2="1468" y2="418" stroke="#93BBB0"/>
+    <text x="1144" y="458" fill="#41544F" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22">Comparable outcome goal</text>
+    <text x="1144" y="494" fill="#41544F" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22">Only if review gates stay strict</text>
   </g>
 
-  <path d="M526 442H594" stroke="#243044" stroke-width="7" stroke-linecap="round"/>
-  <path d="M570 416L594 442L570 468" stroke="#243044" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M1004 442H1072" stroke="#243044" stroke-width="7" stroke-linecap="round"/>
-  <path d="M1048 416L1072 442L1048 468" stroke="#243044" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M492 381H602" stroke="#F9F2E7" stroke-width="5" stroke-linecap="round"/>
+  <path d="M579 362L610 381L579 400" stroke="#F9F2E7" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M998 381H1108" stroke="#F9F2E7" stroke-width="5" stroke-linecap="round"/>
+  <path d="M1085 362L1116 381L1085 400" stroke="#F9F2E7" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <g filter="url(#halo)">
-    <rect x="245" y="690" width="1110" height="108" rx="54" fill="#101828"/>
-    <text x="310" y="758" fill="#FFFFFF" font-family="Inter, SF Pro Display, Arial, sans-serif" font-size="46" font-weight="900" letter-spacing="-0.8">MiniMax-2.7H + GPT-5.5 oversight ≈ GPT-5.5 quality?</text>
+  <g filter="url(#shadow)">
+    <rect x="210" y="624" width="1180" height="132" rx="18" fill="#F9F2E7"/>
+    <text x="260" y="682" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="43" font-weight="700">MiniMax-2.7 HighSpeed + GPT-5.5 oversight ~= GPT-5.5-only quality?</text>
+    <text x="262" y="726" fill="#56616D" font-family="'Helvetica Neue', Arial, sans-serif" font-size="23">This is the operational bet: cheap iteration, expensive judgment, strict verification.</text>
   </g>
-  <text x="332" y="832" fill="#5F6B7C" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="600">The workflow is valuable only if orchestration converts cheaper execution into premium-level deliverables.</text>
+
+  <text x="100" y="842" fill="#C8D0C8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22">Best single worker today: Claude Sonnet 4.6. Best cost discipline: use premium intelligence sparingly.</text>
 </svg>

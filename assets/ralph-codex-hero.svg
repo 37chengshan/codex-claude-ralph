@@ -1,100 +1,60 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Ralph orchestration concept art</title>
-  <desc id="desc">A cinematic command room concept image showing Codex directing Claude Code workers through a verified Ralph runtime loop.</desc>
+  <title id="title">Ralph rebuilt for Codex</title>
+  <desc id="desc">Source repo compatible orchestration with Codex planner and reviewer, Claude Code worker, Playwright verification, and Python runtime.</desc>
   <defs>
-    <radialGradient id="bgGlow" cx="50%" cy="42%" r="65%">
-      <stop offset="0" stop-color="#1D4DFF" stop-opacity="0.36"/>
-      <stop offset="0.46" stop-color="#0B162E" stop-opacity="0.94"/>
-      <stop offset="1" stop-color="#05070D"/>
-    </radialGradient>
-    <linearGradient id="glass" x1="210" y1="110" x2="1390" y2="790" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#182844" stop-opacity="0.88"/>
-      <stop offset="1" stop-color="#070B14" stop-opacity="0.92"/>
+    <linearGradient id="bg" x1="112" y1="72" x2="1456" y2="836" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10141B"/>
+      <stop offset="0.48" stop-color="#182433"/>
+      <stop offset="1" stop-color="#18484A"/>
     </linearGradient>
-    <linearGradient id="premium" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#9BE7FF"/>
-      <stop offset="1" stop-color="#7C5CFF"/>
+    <linearGradient id="paper" x1="226" y1="132" x2="1380" y2="770" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FAF6EC"/>
+      <stop offset="1" stop-color="#EAF2F1"/>
     </linearGradient>
-    <linearGradient id="worker" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#7EF0C1"/>
-      <stop offset="1" stop-color="#1BAA8B"/>
+    <linearGradient id="line" x1="286" y1="198" x2="1314" y2="198" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF7A59"/>
+      <stop offset="0.34" stop-color="#F6C85F"/>
+      <stop offset="0.68" stop-color="#2EB7A7"/>
+      <stop offset="1" stop-color="#5E8CFF"/>
     </linearGradient>
-    <linearGradient id="verify" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#FFE08A"/>
-      <stop offset="1" stop-color="#F59E0B"/>
-    </linearGradient>
-    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#000000" flood-opacity="0.42"/>
-    </filter>
-    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="12" result="blur"/>
-      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.35 0 0 0 0 0.78 0 0 0 0 1 0 0 0 0.8 0"/>
-      <feBlend in="SourceGraphic"/>
+    <filter id="softShadow" x="174" y="92" width="1252" height="720" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="26" stdDeviation="28" flood-color="#02040A" flood-opacity="0.28"/>
     </filter>
   </defs>
-
-  <rect width="1600" height="900" rx="38" fill="url(#bgGlow)"/>
-  <path d="M0 770C240 666 436 686 632 734C890 797 1104 806 1600 674V900H0V770Z" fill="#02040A" opacity="0.72"/>
-  <g opacity="0.18">
-    <path d="M170 120H1430M170 210H1430M170 300H1430M170 390H1430M170 480H1430M170 570H1430M170 660H1430" stroke="#9AB6FF"/>
-    <path d="M230 80V710M390 80V710M550 80V710M710 80V710M870 80V710M1030 80V710M1190 80V710M1350 80V710" stroke="#9AB6FF"/>
-  </g>
-
+  <rect width="1600" height="900" rx="40" fill="url(#bg)"/>
+  <path d="M0 742C208 690 362 708 562 760C775 816 1008 814 1228 714C1390 640 1517 626 1600 654V900H0V742Z" fill="#0D1118" fill-opacity="0.34"/>
+  <path d="M112 96H1488V804H112V96Z" fill="none" stroke="#F6EFE2" stroke-opacity="0.13" stroke-width="2"/>
   <g filter="url(#softShadow)">
-    <rect x="160" y="86" width="1280" height="690" rx="42" fill="url(#glass)" stroke="#A7C7FF" stroke-opacity="0.22" stroke-width="2"/>
-    <rect x="198" y="126" width="1204" height="7" rx="3.5" fill="url(#premium)"/>
+    <rect x="224" y="128" width="1152" height="640" rx="34" fill="url(#paper)"/>
   </g>
-
-  <text x="228" y="220" fill="#F8FBFF" font-family="Inter, SF Pro Display, Arial, sans-serif" font-size="78" font-weight="800" letter-spacing="-2.4">Ralph for Codex</text>
-  <text x="232" y="274" fill="#B9C7DC" font-family="Inter, SF Pro Text, Arial, sans-serif" font-size="28" font-weight="500">premium planning, cheap execution, deterministic verification</text>
-
-  <g transform="translate(635 325)" filter="url(#glow)">
-    <circle cx="165" cy="165" r="132" fill="#0E1A2D" stroke="#7FD8FF" stroke-width="4"/>
-    <circle cx="165" cy="165" r="84" fill="#132946" stroke="#9BE7FF" stroke-opacity="0.78" stroke-width="3"/>
-    <path d="M113 170C143 111 187 111 217 170C188 226 143 226 113 170Z" fill="#7FD8FF" fill-opacity="0.18" stroke="#AEEBFF" stroke-width="4"/>
-    <circle cx="165" cy="170" r="25" fill="#E8F7FF"/>
-    <text x="74" y="342" fill="#EAF7FF" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">ORCHESTRATOR</text>
-  </g>
-
+  <rect x="286" y="196" width="1028" height="8" rx="4" fill="url(#line)"/>
+  <text x="286" y="284" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="86" font-weight="700">Ralph, rebuilt for Codex</text>
+  <text x="290" y="344" fill="#485465" font-family="'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="500">Source-repo compatible orchestration with Codex planner/reviewer,</text>
+  <text x="290" y="386" fill="#485465" font-family="'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="500">Claude Code worker, and Playwright browser verification.</text>
   <g>
-    <path d="M430 432C520 385 598 381 680 430" stroke="#7FD8FF" stroke-width="6" stroke-linecap="round" stroke-dasharray="14 16"/>
-    <path d="M920 430C1008 380 1084 386 1188 430" stroke="#7EF0C1" stroke-width="6" stroke-linecap="round" stroke-dasharray="14 16"/>
-    <path d="M800 616C768 680 662 710 530 658" stroke="#FFE08A" stroke-width="6" stroke-linecap="round" stroke-dasharray="14 16"/>
-    <path d="M800 616C838 682 951 708 1086 656" stroke="#FFE08A" stroke-width="6" stroke-linecap="round" stroke-dasharray="14 16"/>
+    <rect x="290" y="468" width="220" height="112" rx="10" fill="#111827"/>
+    <text x="320" y="506" fill="#8FB3FF" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700">COMMANDER</text>
+    <text x="320" y="546" fill="#FFFFFF" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700">Codex</text>
   </g>
-
-  <g transform="translate(238 362)">
-    <rect width="282" height="166" rx="26" fill="#0C1830" stroke="#85DFFF" stroke-opacity="0.75" stroke-width="2"/>
-    <circle cx="58" cy="58" r="27" fill="url(#premium)"/>
-    <path d="M48 60L57 69L72 48" stroke="#06101F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="100" y="58" fill="#9BE7FF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">CODEX</text>
-    <text x="100" y="94" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">Planner</text>
-    <text x="34" y="136" fill="#AFC1D7" font-family="Inter, Arial, sans-serif" font-size="19">slice stories + design gates</text>
+  <path d="M532 524H592" stroke="#111827" stroke-width="4" stroke-linecap="round"/>
+  <path d="M579 510L604 524L579 538" stroke="#111827" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g>
+    <rect x="626" y="468" width="220" height="112" rx="10" fill="#F6C85F"/>
+    <text x="656" y="506" fill="#6F4800" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700">WORKER</text>
+    <text x="656" y="546" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700">Claude</text>
   </g>
-
-  <g transform="translate(1080 362)">
-    <rect width="282" height="166" rx="26" fill="#092417" stroke="#7EF0C1" stroke-opacity="0.75" stroke-width="2"/>
-    <circle cx="58" cy="58" r="27" fill="url(#worker)"/>
-    <path d="M44 63C60 42 78 50 68 72C58 96 35 85 44 63Z" fill="#03120B"/>
-    <text x="100" y="58" fill="#91F5D0" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">WORKERS</text>
-    <text x="100" y="94" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">Claude Code</text>
-    <text x="34" y="136" fill="#BCEAD8" font-family="Inter, Arial, sans-serif" font-size="19">bulk implementation lane</text>
+  <path d="M868 524H928" stroke="#111827" stroke-width="4" stroke-linecap="round"/>
+  <path d="M915 510L940 524L915 538" stroke="#111827" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g>
+    <rect x="962" y="468" width="250" height="112" rx="10" fill="#2EB7A7"/>
+    <text x="992" y="506" fill="#073A36" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700">VERIFIER</text>
+    <text x="992" y="546" fill="#FFFFFF" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700">Playwright</text>
   </g>
-
-  <g transform="translate(394 622)">
-    <rect width="308" height="108" rx="24" fill="#231A08" stroke="#FFE08A" stroke-opacity="0.78" stroke-width="2"/>
-    <text x="34" y="46" fill="#FFE08A" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">VERIFY</text>
-    <text x="34" y="81" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="29" font-weight="800">Tests + Playwright</text>
+  <g>
+    <rect x="290" y="638" width="922" height="64" rx="8" fill="#FFFFFF" stroke="#D7DED8"/>
+    <text x="318" y="679" fill="#111827" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="23">ralph.sh · prompt.md · CLAUDE.md · prd.json · progress.txt</text>
   </g>
-
-  <g transform="translate(898 622)">
-    <rect width="308" height="108" rx="24" fill="#121827" stroke="#D6E2FF" stroke-opacity="0.42" stroke-width="2"/>
-    <text x="34" y="46" fill="#C9D8F2" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">STATE</text>
-    <text x="34" y="81" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="29" font-weight="800">progress + evidence</text>
-  </g>
-
-  <g opacity="0.95">
-    <rect x="228" y="800" width="1144" height="46" rx="23" fill="#030611" stroke="#5670A6" stroke-opacity="0.32"/>
-    <text x="276" y="831" fill="#D7E5FF" font-family="SF Mono, Menlo, Consolas, monospace" font-size="20">ralph.sh  →  prompt.md  →  prd.json  →  .codex-ralph/runs  →  progress.txt</text>
-  </g>
+  <text x="1238" y="508" fill="#111827" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700">RUNTIME</text>
+  <text x="1238" y="548" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700">Python</text>
+  <text x="286" y="732" fill="#66717F" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20">Public surface stays Ralph-like. Internal state and runs live under .codex-ralph/.</text>
 </svg>
