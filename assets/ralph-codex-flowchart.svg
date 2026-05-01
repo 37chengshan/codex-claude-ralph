@@ -1,6 +1,6 @@
 <svg width="1600" height="980" viewBox="0 0 1600 980" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Workflow DAG and review loop</title>
-  <desc id="desc">A task graph diagram showing interview readiness, user approval, parallel Claude workers, Codex review, rework, merge, Playwright evidence, and final review.</desc>
+  <desc id="desc">A task graph diagram showing interview readiness, user approval, file-based dispatch, visible Claude workers, Codex review, explicit rework cycles, and evidence flowing back into state.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="980" gradientUnits="userSpaceOnUse">
       <stop stop-color="#F6EFE3"/>
@@ -23,6 +23,9 @@
     <path d="M405 594V710"/>
     <path d="M646 772H830"/>
     <path d="M1072 772H1224"/>
+    <path d="M1216 600C1216 676 1110 698 1030 688"/>
+    <path d="M830 620C742 676 622 680 520 620"/>
+    <path d="M304 650C266 610 250 560 254 506"/>
   </g>
   <g filter="url(#shadow)">
     <rect x="88" y="208" width="210" height="136" rx="18" fill="#111827"/>
@@ -44,9 +47,9 @@
   </g>
   <g filter="url(#shadow)">
     <rect x="1116" y="208" width="264" height="136" rx="18" fill="#FFFFFF" stroke="#D8CDBA" stroke-width="2"/>
-    <text x="1148" y="250" fill="#6A58C9" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800">04 DISPATCH</text>
-    <text x="1148" y="296" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700">Worktrees</text>
-    <text x="1148" y="326" fill="#5A6673" font-family="'Helvetica Neue', Arial, sans-serif" font-size="17">safe parallel branches</text>
+    <text x="1148" y="250" fill="#6A58C9" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800">04 FILE LAYER</text>
+    <text x="1148" y="292" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="31" font-weight="700">.codex-ralph</text>
+    <text x="1148" y="322" fill="#5A6673" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15">goal spec · task graph · runs</text>
   </g>
   <g filter="url(#shadow)">
     <rect x="1040" y="444" width="338" height="124" rx="18" fill="#111827"/>
@@ -57,7 +60,8 @@
   <g filter="url(#shadow)">
     <rect x="650" y="444" width="260" height="124" rx="18" fill="#FFFFFF" stroke="#D8CDBA" stroke-width="2"/>
     <text x="682" y="485" fill="#9D4C2D" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800">06 EVIDENCE</text>
-    <text x="682" y="530" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="31" font-weight="700">Diff + tests</text>
+    <text x="682" y="520" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="29" font-weight="700">Diff + tests</text>
+    <text x="682" y="548" fill="#5A6673" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15">logs · JSON · Playwright</text>
   </g>
   <g filter="url(#shadow)">
     <rect x="274" y="444" width="258" height="124" rx="18" fill="#FFFFFF" stroke="#D8CDBA" stroke-width="2"/>
@@ -82,6 +86,9 @@
     <text x="1256" y="790" fill="#FFFFFF" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700">Ship only</text>
     <text x="1256" y="824" fill="#FFFFFF" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700">on pass</text>
   </g>
+  <text x="1088" y="650" fill="#6A58C9" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700">worker result -> runs/* -> status update</text>
+  <text x="622" y="674" fill="#0E7C70" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700">evidence -> review -> rework brief</text>
+  <text x="182" y="630" fill="#8B620C" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700">failed review loops back to worker</text>
   <rect x="88" y="878" width="1422" height="56" rx="28" fill="#111827"/>
-  <text x="124" y="914" fill="#F6EFE3" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600">UI tasks require Playwright: no JS errors, state change, non-empty canvas, screenshots, and useful traces.</text>
+  <text x="124" y="914" fill="#F6EFE3" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600">State keeps moving through files: goal_spec.json -> task_graph.json -> worker_output.json -> review.json -> events.jsonl.</text>
 </svg>

@@ -1,6 +1,6 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Codex Claude Ralph command loop</title>
-  <desc id="desc">A bold editorial hero showing Codex as visible command, Ralph as runtime rail, Claude as terminal worker, and Playwright as evidence.</desc>
+  <desc id="desc">A bold editorial hero showing Codex as visible command, a file communication layer under .codex-ralph, Claude as terminal worker, and Playwright as evidence.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
       <stop stop-color="#101820"/>
@@ -27,8 +27,8 @@
   <path d="M214 180H1386" stroke="url(#ribbon)" stroke-width="10" stroke-linecap="round"/>
   <text x="214" y="282" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="700">Codex commands.</text>
   <text x="214" y="362" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="700">Claude executes.</text>
-  <text x="218" y="414" fill="#52606D" font-family="'Helvetica Neue', Arial, sans-serif" font-size="27" font-weight="500">A visible Ralph-style workflow for planning, worker dispatch,</text>
-  <text x="218" y="452" fill="#52606D" font-family="'Helvetica Neue', Arial, sans-serif" font-size="27" font-weight="500">review, rework, merge, and final acceptance.</text>
+  <text x="218" y="414" fill="#52606D" font-family="'Helvetica Neue', Arial, sans-serif" font-size="27" font-weight="500">Codex plans in-chat. Claude works in Terminal. The bridge is a</text>
+  <text x="218" y="452" fill="#52606D" font-family="'Helvetica Neue', Arial, sans-serif" font-size="27" font-weight="500">repo-local file communication layer under .codex-ralph/.</text>
   <g>
     <rect x="218" y="512" width="270" height="126" rx="16" fill="#111827"/>
     <text x="246" y="552" fill="#F7CB5D" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="2">VISIBLE COMMAND</text>
@@ -38,18 +38,19 @@
   <path d="M604 575L582 559V591L604 575Z" fill="#111827"/>
   <g>
     <rect x="638" y="512" width="270" height="126" rx="16" fill="#FFFDF7" stroke="#D9CEBB" stroke-width="2"/>
-    <text x="666" y="552" fill="#9D4C2D" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="2">RUNTIME RAIL</text>
-    <text x="666" y="604" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700">Ralph</text>
+    <text x="666" y="548" fill="#9D4C2D" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="800" letter-spacing="2">FILE COMMUNICATION</text>
+    <text x="666" y="592" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700">.codex-ralph/</text>
+    <text x="666" y="624" fill="#52606D" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="600">goal_spec.json · task_graph.json</text>
   </g>
   <path d="M932 575H1024" stroke="#111827" stroke-width="5" stroke-linecap="round"/>
   <path d="M1024 575L1002 559V591L1024 575Z" fill="#111827"/>
   <g>
     <rect x="1058" y="512" width="270" height="126" rx="16" fill="#183D3A"/>
-    <text x="1086" y="552" fill="#7BE0CD" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="2">TERMINAL WORKER</text>
+    <text x="1086" y="552" fill="#7BE0CD" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="2">VISIBLE TERMINAL WORKER</text>
     <text x="1086" y="604" fill="#FFFFFF" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700">Claude</text>
   </g>
   <g>
     <rect x="218" y="686" width="1110" height="52" rx="26" fill="#111827"/>
-    <text x="252" y="721" fill="#F8F0DF" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="600">Deep interview -> task DAG -> visible workers -> Codex review -> rework loop -> final audit</text>
+    <text x="252" y="721" fill="#F8F0DF" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="600">Prompt -> files -> worker output -> evidence -> Codex review -> rework or merge</text>
   </g>
 </svg>
