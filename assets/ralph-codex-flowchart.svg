@@ -66,7 +66,8 @@
   <g filter="url(#shadow)">
     <rect x="238" y="710" width="408" height="124" rx="18" fill="#FFF8E8" stroke="#D7B453" stroke-width="2"/>
     <text x="270" y="751" fill="#8B620C" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800">REWORK LOOP</text>
-    <text x="270" y="796" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700">Concrete brief, max 3 tries</text>
+    <text x="270" y="790" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="31" font-weight="700">Concrete brief</text>
+    <text x="270" y="824" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="31" font-weight="700">max 3 tries</text>
   </g>
   <g filter="url(#shadow)">
     <rect x="830" y="710" width="242" height="124" rx="18" fill="#173F3B"/>
@@ -76,8 +77,9 @@
   <g filter="url(#shadow)">
     <rect x="1224" y="710" width="286" height="124" rx="18" fill="#111827"/>
     <text x="1256" y="751" fill="#F7CB5D" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800">FINAL AUDIT</text>
-    <text x="1256" y="796" fill="#FFFFFF" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700">Ship only on pass</text>
+    <text x="1256" y="790" fill="#FFFFFF" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700">Ship only</text>
+    <text x="1256" y="824" fill="#FFFFFF" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700">on pass</text>
   </g>
   <rect x="88" y="878" width="1422" height="56" rx="28" fill="#111827"/>
-  <text x="124" y="914" fill="#F6EFE3" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="600">UI tasks are blocked without Playwright: no JS errors, interactive state change, non-empty canvas, screenshots, and traces when useful.</text>
+  <text x="124" y="914" fill="#F6EFE3" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600">UI tasks require Playwright: no JS errors, state change, non-empty canvas, screenshots, and useful traces.</text>
 </svg>

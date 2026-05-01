@@ -12,7 +12,8 @@
   </defs>
   <rect width="1600" height="920" rx="38" fill="url(#bg)"/>
   <text x="86" y="104" fill="#F8F0DF" font-family="Georgia, 'Times New Roman', serif" font-size="62" font-weight="700">Spend judgment, not premium volume</text>
-  <text x="90" y="150" fill="#C7D0C8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="23">The workflow bets on expensive supervision plus cheaper implementation, with Codex review preventing quality collapse.</text>
+  <text x="90" y="146" fill="#C7D0C8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="23">Expensive supervision, cheaper implementation.</text>
+  <text x="90" y="178" fill="#C7D0C8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="23">Codex review prevents quality collapse.</text>
   <g filter="url(#shadow)">
     <rect x="86" y="232" width="396" height="332" rx="22" fill="#F8F0DF"/>
     <text x="126" y="284" fill="#9D4C2D" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="2">PREMIUM LANE</text>
@@ -43,9 +44,10 @@
   <path d="M482 398H602" stroke="#F8F0DF" stroke-width="5" stroke-linecap="round"/>
   <path d="M998 398H1118" stroke="#F8F0DF" stroke-width="5" stroke-linecap="round"/>
   <g filter="url(#shadow)">
-    <rect x="208" y="666" width="1184" height="128" rx="24" fill="#F8F0DF"/>
-    <text x="250" y="718" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700">Premium oversight + cheap execution ≈ premium-only shipped quality?</text>
-    <text x="252" y="760" fill="#52606D" font-family="'Helvetica Neue', Arial, sans-serif" font-size="23">Only if the review loop is strict: scoped tasks, real tests, Playwright evidence, concrete rework, and final audit.</text>
+    <rect x="208" y="646" width="1184" height="162" rx="24" fill="#F8F0DF"/>
+    <text x="250" y="700" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700">Premium oversight + cheap execution</text>
+    <text x="250" y="746" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700">can approach premium-only shipped quality.</text>
+    <text x="252" y="786" fill="#52606D" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22">Only with strict review: scoped tasks, real tests, Playwright evidence, rework, and final audit.</text>
   </g>
-  <text x="90" y="850" fill="#C7D0C8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22">Best worker quality remains Claude Sonnet 4.6. The cost-saving path is to reserve premium tokens for judgment.</text>
+  <text x="90" y="860" fill="#C7D0C8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22">Best worker quality remains Claude Sonnet 4.6. The cost-saving path is to reserve premium tokens for judgment.</text>
 </svg>
