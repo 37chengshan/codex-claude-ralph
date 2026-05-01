@@ -1,60 +1,54 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Ralph rebuilt for Codex</title>
-  <desc id="desc">Source repo compatible orchestration with Codex planner and reviewer, Claude Code worker, Playwright verification, and Python runtime.</desc>
+  <title id="title">Codex Claude Ralph command loop</title>
+  <desc id="desc">A bold editorial hero showing Codex as visible command, Ralph as runtime rail, Claude as terminal worker, and Playwright as evidence.</desc>
   <defs>
-    <linearGradient id="bg" x1="112" y1="72" x2="1456" y2="836" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#10141B"/>
-      <stop offset="0.48" stop-color="#182433"/>
-      <stop offset="1" stop-color="#18484A"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101820"/>
+      <stop offset="0.52" stop-color="#162D34"/>
+      <stop offset="1" stop-color="#27381E"/>
     </linearGradient>
-    <linearGradient id="paper" x1="226" y1="132" x2="1380" y2="770" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FAF6EC"/>
-      <stop offset="1" stop-color="#EAF2F1"/>
+    <linearGradient id="ribbon" x1="180" y1="108" x2="1420" y2="780" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF734D"/>
+      <stop offset="0.42" stop-color="#F7CB5D"/>
+      <stop offset="0.72" stop-color="#32BBA4"/>
+      <stop offset="1" stop-color="#6697FF"/>
     </linearGradient>
-    <linearGradient id="line" x1="286" y1="198" x2="1314" y2="198" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FF7A59"/>
-      <stop offset="0.34" stop-color="#F6C85F"/>
-      <stop offset="0.68" stop-color="#2EB7A7"/>
-      <stop offset="1" stop-color="#5E8CFF"/>
-    </linearGradient>
-    <filter id="softShadow" x="174" y="92" width="1252" height="720" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="26" stdDeviation="28" flood-color="#02040A" flood-opacity="0.28"/>
+    <filter id="cardShadow" x="0" y="0" width="1600" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="28" stdDeviation="30" flood-color="#03060A" flood-opacity="0.34"/>
     </filter>
   </defs>
-  <rect width="1600" height="900" rx="40" fill="url(#bg)"/>
-  <path d="M0 742C208 690 362 708 562 760C775 816 1008 814 1228 714C1390 640 1517 626 1600 654V900H0V742Z" fill="#0D1118" fill-opacity="0.34"/>
-  <path d="M112 96H1488V804H112V96Z" fill="none" stroke="#F6EFE2" stroke-opacity="0.13" stroke-width="2"/>
-  <g filter="url(#softShadow)">
-    <rect x="224" y="128" width="1152" height="640" rx="34" fill="url(#paper)"/>
+  <rect width="1600" height="900" rx="42" fill="url(#bg)"/>
+  <path d="M0 697C194 633 382 661 566 725C798 806 1035 799 1252 674C1408 584 1538 592 1600 624V900H0V697Z" fill="#070A0E" fill-opacity="0.3"/>
+  <circle cx="1310" cy="154" r="210" fill="#F7CB5D" fill-opacity="0.08"/>
+  <circle cx="216" cy="714" r="260" fill="#32BBA4" fill-opacity="0.08"/>
+  <g filter="url(#cardShadow)">
+    <rect x="152" y="96" width="1296" height="708" rx="34" fill="#F8F0DF"/>
   </g>
-  <rect x="286" y="196" width="1028" height="8" rx="4" fill="url(#line)"/>
-  <text x="286" y="284" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="86" font-weight="700">Ralph, rebuilt for Codex</text>
-  <text x="290" y="344" fill="#485465" font-family="'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="500">Source-repo compatible orchestration with Codex planner/reviewer,</text>
-  <text x="290" y="386" fill="#485465" font-family="'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="500">Claude Code worker, and Playwright browser verification.</text>
+  <path d="M214 180H1386" stroke="url(#ribbon)" stroke-width="10" stroke-linecap="round"/>
+  <text x="214" y="282" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="700">Codex commands.</text>
+  <text x="214" y="362" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="700">Claude executes.</text>
+  <text x="218" y="424" fill="#52606D" font-family="'Helvetica Neue', Arial, sans-serif" font-size="28" font-weight="500">A visible Ralph-style workflow for planning, worker dispatch, review, rework, merge, and final acceptance.</text>
   <g>
-    <rect x="290" y="468" width="220" height="112" rx="10" fill="#111827"/>
-    <text x="320" y="506" fill="#8FB3FF" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700">COMMANDER</text>
-    <text x="320" y="546" fill="#FFFFFF" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700">Codex</text>
+    <rect x="218" y="512" width="270" height="126" rx="16" fill="#111827"/>
+    <text x="246" y="552" fill="#F7CB5D" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="2">VISIBLE COMMAND</text>
+    <text x="246" y="604" fill="#FFFFFF" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700">Codex</text>
   </g>
-  <path d="M532 524H592" stroke="#111827" stroke-width="4" stroke-linecap="round"/>
-  <path d="M579 510L604 524L579 538" stroke="#111827" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M512 575H604" stroke="#111827" stroke-width="5" stroke-linecap="round"/>
+  <path d="M604 575L582 559V591L604 575Z" fill="#111827"/>
   <g>
-    <rect x="626" y="468" width="220" height="112" rx="10" fill="#F6C85F"/>
-    <text x="656" y="506" fill="#6F4800" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700">WORKER</text>
-    <text x="656" y="546" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700">Claude</text>
+    <rect x="638" y="512" width="270" height="126" rx="16" fill="#FFFDF7" stroke="#D9CEBB" stroke-width="2"/>
+    <text x="666" y="552" fill="#9D4C2D" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="2">RUNTIME RAIL</text>
+    <text x="666" y="604" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700">Ralph</text>
   </g>
-  <path d="M868 524H928" stroke="#111827" stroke-width="4" stroke-linecap="round"/>
-  <path d="M915 510L940 524L915 538" stroke="#111827" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M932 575H1024" stroke="#111827" stroke-width="5" stroke-linecap="round"/>
+  <path d="M1024 575L1002 559V591L1024 575Z" fill="#111827"/>
   <g>
-    <rect x="962" y="468" width="250" height="112" rx="10" fill="#2EB7A7"/>
-    <text x="992" y="506" fill="#073A36" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700">VERIFIER</text>
-    <text x="992" y="546" fill="#FFFFFF" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700">Playwright</text>
+    <rect x="1058" y="512" width="270" height="126" rx="16" fill="#183D3A"/>
+    <text x="1086" y="552" fill="#7BE0CD" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="2">TERMINAL WORKER</text>
+    <text x="1086" y="604" fill="#FFFFFF" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700">Claude</text>
   </g>
   <g>
-    <rect x="290" y="638" width="922" height="64" rx="8" fill="#FFFFFF" stroke="#D7DED8"/>
-    <text x="318" y="679" fill="#111827" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="23">ralph.sh · prompt.md · CLAUDE.md · prd.json · progress.txt</text>
+    <rect x="218" y="686" width="1110" height="52" rx="26" fill="#111827"/>
+    <text x="252" y="721" fill="#F8F0DF" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="600">Deep interview -> task DAG -> visible workers -> Codex review -> rework loop -> final audit</text>
   </g>
-  <text x="1238" y="508" fill="#111827" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700">RUNTIME</text>
-  <text x="1238" y="548" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700">Python</text>
-  <text x="286" y="732" fill="#66717F" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20">Public surface stays Ralph-like. Internal state and runs live under .codex-ralph/.</text>
 </svg>
