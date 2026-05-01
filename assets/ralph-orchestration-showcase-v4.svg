@@ -1,0 +1,34 @@
+<svg width="1600" height="820" viewBox="0 0 1600 820" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Ralph orchestration command center</title>
+  <desc id="desc">A cyber command-center style diagram showing Codex as commander, Claude Code as worker, Playwright as verifier, and Ralph as runtime memory.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="820" gradientUnits="userSpaceOnUse"><stop stop-color="#020617"/><stop offset="0.55" stop-color="#081226"/><stop offset="1" stop-color="#020617"/></linearGradient>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%"><stop stop-color="#67E8F9" stop-opacity="0.38"/><stop offset="1" stop-color="#67E8F9" stop-opacity="0"/></radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="26" stdDeviation="30" flood-color="#000000" flood-opacity="0.44"/></filter>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="10" result="b"/><feBlend in="SourceGraphic" in2="b" mode="screen"/></filter>
+  </defs>
+  <rect width="1600" height="820" rx="44" fill="url(#bg)"/>
+  <circle cx="800" cy="418" r="390" fill="url(#core)"/>
+  <g opacity="0.13">
+    <circle cx="800" cy="418" r="300" stroke="#BAE6FD" stroke-width="2"/><circle cx="800" cy="418" r="215" stroke="#BAE6FD" stroke-width="2"/><circle cx="800" cy="418" r="130" stroke="#BAE6FD" stroke-width="2"/>
+    <path d="M800 88V748M470 418H1130M567 185L1033 651M1033 185L567 651" stroke="#BAE6FD"/>
+  </g>
+  <text x="102" y="124" fill="#F8FAFC" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="64" font-weight="850" letter-spacing="-1.6">Codex commands. Claude ships.</text>
+  <text x="106" y="174" fill="#A8B7CC" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="500">Ralph keeps the loop bounded, verified, and restartable.</text>
+  <g filter="url(#glow)">
+    <circle cx="800" cy="418" r="118" fill="#07101F" stroke="#67E8F9" stroke-width="4"/>
+    <circle cx="800" cy="418" r="64" fill="#0B1B33" stroke="#A5F3FC" stroke-width="2"/>
+    <path d="M757 418C784 378 816 378 843 418C816 458 784 458 757 418Z" fill="#67E8F9" fill-opacity="0.22" stroke="#CFFAFE" stroke-width="4"/>
+    <circle cx="800" cy="418" r="18" fill="#ECFEFF"/>
+  </g>
+  <text x="703" y="575" fill="#E0F2FE" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="850">RALPH RUNTIME</text>
+  <path d="M440 362C540 300 642 302 714 366" stroke="#60A5FA" stroke-width="7" stroke-linecap="round" stroke-dasharray="14 16"/>
+  <path d="M886 366C958 302 1060 300 1160 362" stroke="#34D399" stroke-width="7" stroke-linecap="round" stroke-dasharray="14 16"/>
+  <path d="M886 470C996 552 1128 558 1240 505" stroke="#FBBF24" stroke-width="7" stroke-linecap="round" stroke-dasharray="14 16"/>
+  <path d="M714 470C604 552 472 558 360 505" stroke="#C084FC" stroke-width="7" stroke-linecap="round" stroke-dasharray="14 16"/>
+  <g filter="url(#shadow)"><rect x="174" y="286" width="310" height="184" rx="32" fill="#08162D" stroke="#60A5FA" stroke-width="2"/><text x="222" y="356" fill="#93C5FD" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="850">CODEX</text><text x="222" y="410" fill="#FFFFFF" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="44" font-weight="900">Commander</text></g>
+  <g filter="url(#shadow)"><rect x="1116" y="286" width="310" height="184" rx="32" fill="#062319" stroke="#34D399" stroke-width="2"/><text x="1164" y="356" fill="#A7F3D0" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="850">CLAUDE CODE</text><text x="1164" y="410" fill="#FFFFFF" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="44" font-weight="900">Worker</text></g>
+  <g filter="url(#shadow)"><rect x="1016" y="552" width="310" height="148" rx="30" fill="#251A08" stroke="#FBBF24" stroke-width="2"/><text x="1064" y="610" fill="#FDE68A" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="850">PLAYWRIGHT</text><text x="1064" y="662" fill="#FFFFFF" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="42" font-weight="900">Verify</text></g>
+  <g filter="url(#shadow)"><rect x="274" y="552" width="310" height="148" rx="30" fill="#1B1230" stroke="#C084FC" stroke-width="2"/><text x="322" y="610" fill="#E9D5FF" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="850">MEMORY</text><text x="322" y="662" fill="#FFFFFF" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="42" font-weight="900">Evidence</text></g>
+  <g filter="url(#shadow)"><rect x="220" y="738" width="1160" height="54" rx="27" fill="#030712" stroke="#334155"/><text x="286" y="774" fill="#CBD5E1" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22">prd.json → brief → diff → tests → review → progress.txt</text></g>
+</svg>

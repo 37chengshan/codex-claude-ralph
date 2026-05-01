@@ -8,7 +8,7 @@
 
 它不是全面接管 Codex 的平台。它只在用户明确触发 `$codex-claude-ralph` 或 `/use codex-claude-ralph` 时介入。
 
-![Ralph rebuilt for Codex](assets/ralph-codex-hero.svg)
+![Ralph orchestration showcase](assets/ralph-orchestration-showcase-v4.svg)
 
 ## Why
 
@@ -16,7 +16,7 @@
 
 默认最佳 worker 质量仍然是 `Claude Sonnet 4.6`。Claude 也可以接入更便宜的执行模型，例如 `MiniMax-2.7-HighSpeed`，用于大批量实现工作。核心思想不是替代最强模型，而是让高端模型花在最值得的地方。
 
-![Model Economics](assets/ralph-model-economics.svg)
+![Model economics showcase](assets/ralph-economics-showcase-v4.svg)
 
 ## v10 Flow
 
@@ -33,7 +33,7 @@
 11. 3 次后仍不通过，用户选择继续 Claude 或让当前 Codex/GPT 接手。
 12. 所有任务合并后，Codex 执行最终全面审核，通过才交付。
 
-![Codex visible command loop](assets/ralph-codex-flowchart.svg)
+![Ralph runtime engine](assets/ralph-runtime-engine-v4.svg)
 
 ## Install
 
@@ -154,6 +154,17 @@ Codex review 固定维度：
 Claude 自报成功不等于完成。Codex 必须读取 worker 输出、diff、测试结果、Playwright 结果和验收标准，再通过 `review-mark` 写入 verdict。
 
 UI / browser / canvas / 3D / visualization / interaction 任务必须有 Playwright 证据。缺少证据时 review 应阻断。
+
+## Skill Display
+
+Codex Desktop 可能把 skill 显示为 `{package}:{display_name}`。本仓库安装目录仍保持 `codex-claude-ralph`，但 UI 显示名使用 `Workflow`，避免出现 `Codex Claude Ralph: Codex Claude Ralph` 这种重复标题。
+
+触发名不变：
+
+```text
+$codex-claude-ralph
+/use codex-claude-ralph
+```
 
 ## Verification
 

@@ -1,0 +1,76 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Ralph model economics showcase</title>
+  <desc id="desc">Premium GPT-5.5 supervision controls a large MiniMax-2.7H worker swarm to approach GPT-5.5-grade output.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#030712"/>
+      <stop offset="0.48" stop-color="#07172D"/>
+      <stop offset="1" stop-color="#0B1020"/>
+    </linearGradient>
+    <radialGradient id="blueGlow" cx="50%" cy="50%" r="50%">
+      <stop stop-color="#60A5FA" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#60A5FA" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="greenGlow" cx="50%" cy="50%" r="50%">
+      <stop stop-color="#34D399" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#34D399" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="goldGlow" cx="50%" cy="50%" r="50%">
+      <stop stop-color="#FBBF24" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#FBBF24" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="250" y1="445" x2="1350" y2="445" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA"/>
+      <stop offset="0.5" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#FBBF24"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="26" stdDeviation="32" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feBlend in="SourceGraphic" in2="blur" mode="screen"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" rx="44" fill="url(#bg)"/>
+  <circle cx="270" cy="440" r="310" fill="url(#blueGlow)"/>
+  <circle cx="800" cy="450" r="370" fill="url(#greenGlow)"/>
+  <circle cx="1330" cy="440" r="310" fill="url(#goldGlow)"/>
+  <g opacity="0.16">
+    <path d="M0 185H1600M0 330H1600M0 475H1600M0 620H1600M0 765H1600" stroke="#C7D2FE"/>
+    <path d="M180 0V900M400 0V900M620 0V900M840 0V900M1060 0V900M1280 0V900M1500 0V900" stroke="#C7D2FE"/>
+  </g>
+  <g opacity="0.35">
+    <circle cx="214" cy="230" r="3" fill="#93C5FD"/><circle cx="356" cy="704" r="3" fill="#93C5FD"/><circle cx="612" cy="214" r="3" fill="#6EE7B7"/><circle cx="828" cy="738" r="3" fill="#6EE7B7"/><circle cx="1166" cy="200" r="3" fill="#FDE68A"/><circle cx="1392" cy="680" r="3" fill="#FDE68A"/>
+  </g>
+  <text x="96" y="126" fill="#F8FAFC" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="64" font-weight="850" letter-spacing="-1.8">Premium oversight. Cheap execution.</text>
+  <text x="100" y="176" fill="#AAB7CC" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="500">Ralph spends expensive reasoning only where leverage is highest.</text>
+  <path d="M304 445C438 380 551 371 675 418C760 450 840 450 925 418C1049 371 1162 380 1296 445" stroke="url(#beam)" stroke-width="10" stroke-linecap="round" opacity="0.95" filter="url(#softGlow)"/>
+  <g filter="url(#shadow)">
+    <rect x="120" y="292" width="330" height="310" rx="38" fill="#081326" stroke="#60A5FA" stroke-width="2.5"/>
+    <circle cx="285" cy="384" r="58" fill="#60A5FA" opacity="0.24"/>
+    <circle cx="285" cy="384" r="31" fill="#93C5FD"/>
+    <text x="175" y="492" fill="#BFDBFE" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="850">SUPERVISE</text>
+    <text x="174" y="545" fill="#FFFFFF" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="54" font-weight="900">GPT-5.5</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="565" y="250" width="470" height="394" rx="46" fill="#062319" stroke="#34D399" stroke-width="2.5"/>
+    <g opacity="0.95">
+      <circle cx="682" cy="368" r="32" fill="#34D399"/><circle cx="800" cy="344" r="42" fill="#6EE7B7"/><circle cx="918" cy="368" r="32" fill="#34D399"/>
+      <circle cx="710" cy="476" r="36" fill="#86EFAC"/><circle cx="800" cy="492" r="48" fill="#34D399"/><circle cx="890" cy="476" r="36" fill="#86EFAC"/>
+      <path d="M682 368L800 344L918 368M710 476L800 492L890 476M682 368L710 476M918 368L890 476M800 344V492" stroke="#CFFFE8" stroke-width="4" opacity="0.48"/>
+    </g>
+    <text x="654" y="588" fill="#D1FAE5" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="850">WORKER SWARM</text>
+    <text x="652" y="638" fill="#FFFFFF" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="52" font-weight="900">MiniMax-2.7H</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="1150" y="292" width="330" height="310" rx="38" fill="#241706" stroke="#FBBF24" stroke-width="2.5"/>
+    <path d="M1315 330L1340 405L1420 410L1356 456L1378 535L1315 488L1252 535L1274 456L1210 410L1290 405L1315 330Z" fill="#FBBF24" opacity="0.9"/>
+    <text x="1205" y="492" fill="#FDE68A" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="850">OUTPUT</text>
+    <text x="1204" y="545" fill="#FFFFFF" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="48" font-weight="900">GPT-5.5 grade</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="286" y="714" width="1028" height="94" rx="47" fill="#020617" stroke="#334155" stroke-width="2"/>
+    <text x="372" y="774" fill="#FFFFFF" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="44" font-weight="900">GPT-5.5  +  MiniMax-2.7H  ≈  GPT-5.5</text>
+  </g>
+</svg>
