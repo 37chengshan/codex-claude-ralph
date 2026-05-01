@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["total", "decision", "threshold", "discussion_ready", "hard_blockers", "dimensions", "gates"],
+  "properties": {
+    "total": { "type": "integer" },
+    "decision": { "type": "string" },
+    "threshold": { "type": "integer" },
+    "discussion_ready": { "type": "boolean" },
+    "hard_blockers": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "dimensions": {
+      "type": "object"
+    },
+    "gates": {
+      "type": "object"
+    }
+  }
+}

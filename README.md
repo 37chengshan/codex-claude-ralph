@@ -1,258 +1,171 @@
-# Ralph ![Ralph Codex Hero](assets/ralph-codex-hero.svg)
+# codex-claude-ralph
 
-Ralph is an autonomous AI agent loop. This repository recreates the original [snarktank/ralph](https://github.com/snarktank/ralph) source-repo shape, but fixes the runtime policy to:
+`codex-claude-ralph` 是一个通用、可安装的 Codex workflow skill。v10 的定位是：
 
-- **Codex** as planner and reviewer
-- **Claude Code** as worker
-- **Playwright** as the primary browser verifier for UI stories
+- Codex 在当前对话里做 planner / scheduler / reviewer / final judge
+- Claude CLI 只做可见终端 worker
+- Ralph runtime 负责状态、文件通信、worktree、事件、可见启动、合并和 handoff 记录
 
-Each iteration is still a fresh story-level loop. Public memory persists through git history, `progress.txt`, and root `prd.json`. Internal state, archives, locks, and run artifacts live under `.codex-ralph/`.
+它不是全面接管 Codex 的平台。它只在用户明确触发 `$codex-claude-ralph` 或 `/use codex-claude-ralph` 时介入。
 
-**Amp is intentionally unsupported in this fork.**
+![Ralph rebuilt for Codex](assets/ralph-codex-hero.svg)
 
-## Model Economics
+## Why
 
-The point of this workflow is not "always use the smartest model for every token." The point is to spend a small amount of premium-model budget on decomposition, supervision, and review, then let cheaper execution models do the bulk of the implementation work.
+这个工作流的意义是用少量高级模型 token 做规划、监督和审核，用大量 worker token 做执行性开发，并通过返工闭环保持交付质量。
 
-- **Best default quality bar:** `Claude Sonnet 4.6`
-- **Cheap worker option:** Claude can also be paired with other lower-cost coding models such as `MiniMax-2.7-Highspeed` for large-volume implementation passes
-- **Operating thesis:** a small amount of premium oversight plus a large amount of cheap execution can reach roughly the same shipped quality as an all-premium loop, while using far fewer expensive tokens
+默认最佳 worker 质量仍然是 `Claude Sonnet 4.6`。Claude 也可以接入更便宜的执行模型，例如 `MiniMax-2.7-HighSpeed`，用于大批量实现工作。核心思想不是替代最强模型，而是让高端模型花在最值得的地方。
 
-In practice, this means you reserve premium reasoning for the parts that matter most:
+![Model Economics](assets/ralph-model-economics.svg)
 
-- task slicing
-- acceptance-criteria design
-- diff review
-- failure diagnosis
-- final quality gates
+## v10 Flow
 
-And you push repetitive or high-volume code generation into the cheaper worker lane.
+1. 用户给任务、bug 或功能目标。
+2. Codex 只读探索仓库事实。
+3. 若需求模糊，Codex 按 oh-my-codex 风格每轮只问一个高杠杆问题。
+4. 每轮 discussion 同时展示完整 `epistemic / deontic / dialectical` scorecard。
+5. readiness 通过后，Codex 生成并展示任务 DAG、依赖、并行批次、写范围和验证计划。
+6. 用户确认任务图后才开始执行。
+7. Runtime 为每个任务创建独立 git worktree 和 branch。
+8. Runtime 通过 macOS `Terminal.app` 拉起 Claude CLI，可见运行，同时写 artifact。
+9. Codex 在当前对话里读取 diff、worker 输出、测试和 Playwright 证据并审核。
+10. 审核不通过则写返工 brief，再拉起 Claude。每个任务最多自动返工 3 次。
+11. 3 次后仍不通过，用户选择继续 Claude 或让当前 Codex/GPT 接手。
+12. 所有任务合并后，Codex 执行最终全面审核，通过才交付。
 
-![Ralph Model Economics](assets/ralph-model-economics.svg)
+![Codex visible command loop](assets/ralph-codex-flowchart.svg)
 
-If you only care about absolute worker quality and not cost, `Claude Sonnet 4.6` is still the best fit for the worker role. Ralph exists for the opposite case: keep quality high while reducing how much premium-model spend is required to ship.
+## Install
 
-## Prerequisites
-
-- `python3`
-- `git`
-- `codex` installed and authenticated
-- `claude` installed and authenticated
-- A git repository for the target project
-- For UI stories: a repo-local browser verification command, preferably `npm run test:e2e`
-
-## Setup
-
-### Option 1: Use this repo as the source runtime
-
-From this repo root:
+全局安装：
 
 ```bash
-./ralph.sh init --repo /absolute/path/to/your/project --prd-file ./prompt.md
-./ralph.sh run --max-steps 3
+./install/install.sh global
 ```
 
-If your target project already has a Ralph-style `prd.json`:
+项目局部安装：
 
 ```bash
-./ralph.sh init \
-  --repo /absolute/path/to/your/project \
-  --import-prd-json /absolute/path/to/your/project/prd.json
+./install/install.sh project --repo /absolute/path/to/repo
 ```
 
-### Option 2: Copy the Ralph surface into another project
-
-Copy the public workflow files:
+检查安装和依赖：
 
 ```bash
-ralph.sh
-prompt.md
-CLAUDE.md
-prd.json.example
-skills/
-.claude-plugin/
-flowchart/
+./install/doctor.sh --repo /absolute/path/to/repo
 ```
 
-The runtime is still driven by `orchestrator.py`, but normal usage should go through `./ralph.sh`.
+## Stable Commands
 
-### Browser verification setup
-
-For UI stories, initialize with a Playwright command:
+状态和需求对齐：
 
 ```bash
-./ralph.sh init \
-  --repo /absolute/path/to/your/project \
-  --prd-file ./prompt.md \
-  --browser-verify-command "npm run test:e2e"
+runtime/ralph.sh status --repo /absolute/path/to/repo --json
+runtime/ralph.sh answer --repo /absolute/path/to/repo --choice A --note "..." --language zh
 ```
 
-Recommended pattern:
-
-- Put the target repo's UI smoke coverage behind `npm run test:e2e`
-- Keep Playwright specs repo-local
-- Use Python/HTTP smoke scripts only as backup diagnostics
-
-## Workflow
-
-### 1. Write the task prompt or import a PRD
-
-You can start from:
-
-- `prompt.md`
-- a markdown PRD passed via `--prd-file`
-- a Ralph-compatible `prd.json` passed via `--import-prd-json`
-
-### 2. Initialize Ralph state
+任务图和 worker：
 
 ```bash
-./ralph.sh init --repo /absolute/path/to/project --prd-file ./prompt.md
+runtime/ralph.sh plan --repo /absolute/path/to/repo --task-graph /path/to/task_graph.json
+runtime/ralph.sh launch --repo /absolute/path/to/repo --task-id T1 --run-id run-id --visible-terminal
+runtime/ralph.sh collect --repo /absolute/path/to/repo --task-id T1 --run-id run-id
 ```
 
-This creates or refreshes:
-
-- root `prd.json`
-- root `progress.txt`
-- hidden runtime state in `.codex-ralph/`
-
-### 3. Run the loop
+审核、合并和 handoff：
 
 ```bash
-./ralph.sh
-./ralph.sh --tool claude
-./ralph.sh run --max-steps 5 --max-retries 1
+runtime/ralph.sh review-mark --repo /absolute/path/to/repo --task-id T1 --verdict passed --review /path/to/review.json
+runtime/ralph.sh merge --repo /absolute/path/to/repo --task-id T1 --run-id run-id
+runtime/ralph.sh handoff --repo /absolute/path/to/repo --mode continue_claude_rework
+runtime/ralph.sh handoff --repo /absolute/path/to/repo --mode codex_takeover
 ```
 
-Ralph will:
-
-1. Read root `prd.json`
-2. Pick the next dependency-ready story where `passes: false`
-3. Ask Codex to produce a compact execution brief
-4. Ask Claude Code to implement that single story
-5. Run local tests and optional Playwright verification
-6. Ask Codex to review deterministic evidence
-7. Mark `prd.json` and `.codex-ralph/state.json`
-8. Append learnings to `progress.txt`
-9. Commit on pass unless `--no-commit` is set
-10. Repeat until all stories pass or the step limit is reached
-
-## Key Files
-
-| File | Purpose |
-|------|---------|
-| `ralph.sh` | Primary user entrypoint with Ralph-style command ergonomics |
-| `orchestrator.py` | Internal Python runtime for planning, worker execution, review, locking, and state export |
-| `prompt.md` | Default task prompt entry |
-| `CLAUDE.md` | Worker instruction template used to brief Claude Code |
-| `prd.json` | Public Ralph-compatible task list with `passes` flags |
-| `prd.json.example` | Minimal example PRD format |
-| `progress.txt` | Append-only public progress log |
-| `.codex-ralph/state.json` | Hidden canonical state with `status`, `attempt_count`, and `last_run_id` |
-| `.codex-ralph/runs/` | Stored briefs, worker results, test evidence, and review outputs |
-| `.codex-ralph/archive/` | Archived prior runs and migrated legacy state |
-| `browser_verify.py` | Structured browser verifier wrapper for repo-local commands |
-| `skills/` | Ralph-compatible skill documentation for Codex commander and Claude worker |
-| `.claude-plugin/` | Claude plugin metadata for discovery and packaging shape |
-| `flowchart/` | Source flowchart assets for the runtime loop |
-
-## Flowchart
-
-![Ralph Codex Flowchart](assets/ralph-codex-flowchart.svg)
-
-The source loop definition lives in [flowchart/loop.mmd](flowchart/loop.mmd).
-
-## Critical Concepts
-
-### Each iteration = fresh context
-
-Every story run is a fresh planner/worker/reviewer cycle. Durable memory comes from:
-
-- git history
-- `progress.txt`
-- root `prd.json`
-- hidden `.codex-ralph/state.json`
-
-### Public state outside, enhanced state inside
-
-Users see the Ralph-style public files at repo root. The richer truth stays hidden:
-
-- root `prd.json` keeps `branchName`, `userStories`, and `passes`
-- `.codex-ralph/state.json` keeps explicit `status`, retries, and run IDs
-
-### Small stories still matter
-
-This fork is more defensive than the shell loop, but it still depends on small PRD items. Good stories fit one worker pass and one evidence review. Bad stories force huge prompts, weak verification, and unstable retries.
-
-### Browser verification is first-class
-
-This fork does **not** preserve the original `dev-browser` façade. UI verification is surfaced directly as browser verification with Playwright-style commands.
-
-UI story behavior:
-
-- browser verifier configured and passing: story may pass
-- browser verifier configured and failing: story is blocked
-- browser verifier missing for a UI story: story is blocked
-
-### AGENTS.md updates are controlled
-
-If the target repo has `AGENTS.md`, Claude should only update it when the current story reveals a durable repo convention or gotcha. Otherwise it must leave the file untouched.
-
-### Deterministic evidence beats worker claims
-
-Reviewer decisions are based on:
-
-- worker structured output
-- local test output
-- repo diff evidence
-- browser verification results
-- current story acceptance criteria
-
-## Example Case Study
-
-The repository includes one worked example of this loop driving a real target repo:
-
-- [CityGenius subscription + payment test](docs/citygenius-subscription-payment-test.md)
-
-That document shows how the fork was used to wire a copied Astro blog into a Stripe subscription skeleton with Playwright verification.
-
-## Debugging
-
-Check public progress:
+Playwright：
 
 ```bash
-cat prd.json
-cat progress.txt
+runtime/ralph.sh playwright --repo /absolute/path/to/repo --task-id T1 --url http://127.0.0.1:3000
 ```
 
-Check runtime health:
+旧入口仍保留：
 
 ```bash
-./ralph.sh status
-./ralph.sh doctor
+runtime/scripts/ralph-skill-run.sh --repo /absolute/path/to/repo --goal-spec /absolute/path/to/repo/.codex-ralph/goal_spec.json --max-steps 5
 ```
 
-Inspect internal evidence:
+## File Communication
 
-```bash
-find .codex-ralph/runs -type f | sort | tail -n 20
-cat .codex-ralph/state.json
+所有状态和通信文件写入目标 repo 的 `.codex-ralph/`：
+
+```text
+.codex-ralph/
+  state.json
+  events.jsonl
+  goal_spec.json
+  scorecard.json
+  task_graph.json
+  integration.json
+  runs/<run_id>/tasks/<task_id>/
+    task.json
+    brief.md
+    claude_prompt.md
+    worker_output.json
+    worker_raw.log
+    diff.patch
+    tests.json
+    playwright.json
+    review.json
+    rework_brief.md
+    rework_history.json
+  worktrees/<run_id>/<task_id>/
+  playwright/
+    <task_id>.spec.ts
+    final.spec.ts
+    screenshots/
+    traces/
 ```
 
-## Tool Policy
+`status --json` 暴露：
 
-- `--tool claude` is supported
-- `--tool amp` fails fast with an explicit explanation
-- the command surface stays Ralph-like, but the runtime policy is fixed to Codex commander + Claude worker
+- `stage`
+- `status`
+- `message`
+- `scorecard`
+- `task_graph`
+- `current_batch`
+- `active_workers`
+- `review_queue`
+- `rework_summary`
+- `handoff_options`
+- `events_path`
+- `next_action`
 
-## Archiving
+## Review Rules
 
-When you re-initialize against a different `branchName`, Ralph archives prior runtime state under `.codex-ralph/archive/`.
+Codex review 固定维度：
 
-If this repo previously used the legacy `state/` layout, the runtime migrates it into `.codex-ralph/archive/legacy-state/`.
+- `requirements_fit`
+- `acceptance_coverage`
+- `scope_compliance`
+- `verification_evidence`
+- `integration_risk`
+- `ux_or_runtime_quality`
 
-## References
+Claude 自报成功不等于完成。Codex 必须读取 worker 输出、diff、测试结果、Playwright 结果和验收标准，再通过 `review-mark` 写入 verdict。
 
-- [snarktank/ralph](https://github.com/snarktank/ralph)
-- [Geoffrey Huntley's Ralph article](https://ghuntley.com/ralph/)
-- [Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code)
-- [Playwright documentation](https://playwright.dev/)
+UI / browser / canvas / 3D / visualization / interaction 任务必须有 Playwright 证据。缺少证据时 review 应阻断。
+
+## Verification
+
+自动化覆盖包含：
+
+- install global/project
+- doctor
+- status/answer 旧接口
+- task graph plan/status
+- visible-terminal launch command
+- git worktree creation
+- collect/review-mark/handoff
+- Playwright spec generation
+- worker adapter success/blocked/invalid JSON/timeout/non-zero
+- hook config validation

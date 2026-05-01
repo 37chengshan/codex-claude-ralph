@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["timestamp", "stage", "status", "message"],
+  "properties": {
+    "timestamp": { "type": "string" },
+    "run_id": { "type": "string" },
+    "stage": {
+      "type": "string",
+      "enum": [
+        "intake",
+        "discussion",
+        "plan_gate",
+        "task_graph_pending",
+        "approval_pending",
+        "init",
+        "run",
+        "batch_pending",
+        "worker",
+        "worker_running",
+        "worker_done",
+        "tests",
+        "review",
+        "review_required",
+        "rework_pending",
+        "merge_pending",
+        "final_review",
+        "handoff_decision",
+        "complete",
+        "failed"
+      ]
+    },
+    "story_id": { "type": "string" },
+    "status": { "type": "string" },
+    "message": { "type": "string" },
+    "artifact": { "type": "string" },
+    "next": { "type": "string" }
+  }
+}

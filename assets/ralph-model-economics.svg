@@ -1,37 +1,59 @@
-<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="720" fill="#F5F1E8"/>
-  <rect x="44" y="44" width="1112" height="632" rx="28" fill="#FFFDF8" stroke="#161616" stroke-width="2"/>
-  <text x="84" y="110" fill="#161616" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700">Premium supervision, cheap execution</text>
-  <text x="84" y="148" fill="#5B5B5B" font-family="'Helvetica Neue', Arial, sans-serif" font-size="24">Ralph uses a small amount of high-end reasoning to direct a large amount of low-cost implementation work.</text>
+<svg width="1600" height="920" viewBox="0 0 1600 920" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Premium supervision with low cost execution</title>
+  <desc id="desc">A cost model diagram showing a small premium planner and reviewer lane supervising large low-cost worker execution toward shippable output quality.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="920" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14171D"/>
+      <stop offset="1" stop-color="#26302C"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1600" height="920" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="920" rx="34" fill="url(#bg)"/>
+  <text x="96" y="108" fill="#F9F2E7" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="700">Premium supervision, low-cost execution</text>
+  <text x="100" y="154" fill="#C8D0C8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="24">Spend premium reasoning on planning, review, and correction. Spend worker tokens on bulk implementation.</text>
 
-  <rect x="84" y="208" width="296" height="232" rx="24" fill="#E6F0FF" stroke="#161616" stroke-width="2"/>
-  <text x="112" y="256" fill="#161616" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="700">Premium planner / reviewer</text>
-  <text x="112" y="300" fill="#161616" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700">GPT-5.5</text>
-  <text x="112" y="342" fill="#5B5B5B" font-family="'Helvetica Neue', Arial, sans-serif" font-size="21">or Claude Sonnet 4.6</text>
-  <text x="112" y="384" fill="#161616" font-family="'Helvetica Neue', Arial, sans-serif" font-size="19">Small token budget</text>
-  <text x="112" y="414" fill="#161616" font-family="'Helvetica Neue', Arial, sans-serif" font-size="19">Used for planning, review, and corrections</text>
+  <g filter="url(#shadow)">
+    <rect x="96" y="238" width="396" height="286" rx="16" fill="#F7F1E7"/>
+    <text x="132" y="286" fill="#8A3D25" font-family="'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700">PREMIUM LANE</text>
+    <text x="132" y="340" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700">GPT-5.5</text>
+    <text x="132" y="384" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700">or Claude Sonnet 4.6</text>
+    <line x1="132" y1="418" x2="456" y2="418" stroke="#D9CBBB"/>
+    <text x="132" y="458" fill="#4F5B67" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22">Small token budget</text>
+    <text x="132" y="494" fill="#4F5B67" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22">Planner, reviewer, repair judge</text>
+  </g>
 
-  <rect x="452" y="208" width="296" height="232" rx="24" fill="#FCE7BF" stroke="#161616" stroke-width="2"/>
-  <text x="480" y="256" fill="#161616" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="700">Cheap worker lane</text>
-  <text x="480" y="300" fill="#161616" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700">MiniMax-2.7-Highspeed</text>
-  <text x="480" y="342" fill="#5B5B5B" font-family="'Helvetica Neue', Arial, sans-serif" font-size="21">or other low-cost coding models</text>
-  <text x="480" y="384" fill="#161616" font-family="'Helvetica Neue', Arial, sans-serif" font-size="19">Large token budget</text>
-  <text x="480" y="414" fill="#161616" font-family="'Helvetica Neue', Arial, sans-serif" font-size="19">Used for bulk implementation passes</text>
+  <g filter="url(#shadow)">
+    <rect x="602" y="238" width="396" height="286" rx="16" fill="#F4C95D"/>
+    <text x="638" y="286" fill="#5F4104" font-family="'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700">WORKER LANE</text>
+    <text x="638" y="340" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700">MiniMax-2.7</text>
+    <text x="638" y="384" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700">HighSpeed</text>
+    <line x1="638" y1="418" x2="962" y2="418" stroke="#A77D16"/>
+    <text x="638" y="458" fill="#3B2D10" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22">Large token budget</text>
+    <text x="638" y="494" fill="#3B2D10" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22">Bulk coding and rework passes</text>
+  </g>
 
-  <rect x="820" y="208" width="296" height="232" rx="24" fill="#DCEFD9" stroke="#161616" stroke-width="2"/>
-  <text x="848" y="256" fill="#161616" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="700">Target outcome</text>
-  <text x="848" y="300" fill="#161616" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700">Shippable quality</text>
-  <text x="848" y="342" fill="#5B5B5B" font-family="'Helvetica Neue', Arial, sans-serif" font-size="21">comparable to premium-only loops</text>
-  <text x="848" y="384" fill="#161616" font-family="'Helvetica Neue', Arial, sans-serif" font-size="19">if supervision and verification are strong</text>
+  <g filter="url(#shadow)">
+    <rect x="1108" y="238" width="396" height="286" rx="16" fill="#CFE8DF"/>
+    <text x="1144" y="286" fill="#1C695F" font-family="'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700">TARGET</text>
+    <text x="1144" y="340" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700">Shippable</text>
+    <text x="1144" y="384" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700">quality</text>
+    <line x1="1144" y1="418" x2="1468" y2="418" stroke="#93BBB0"/>
+    <text x="1144" y="458" fill="#41544F" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22">Comparable outcome goal</text>
+    <text x="1144" y="494" fill="#41544F" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22">Only if review gates stay strict</text>
+  </g>
 
-  <path d="M396 324H436" stroke="#161616" stroke-width="4" stroke-linecap="round"/>
-  <path d="M424 310L452 324L424 338" stroke="#161616" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M764 324H804" stroke="#161616" stroke-width="4" stroke-linecap="round"/>
-  <path d="M792 310L820 324L792 338" stroke="#161616" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M492 381H602" stroke="#F9F2E7" stroke-width="5" stroke-linecap="round"/>
+  <path d="M579 362L610 381L579 400" stroke="#F9F2E7" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M998 381H1108" stroke="#F9F2E7" stroke-width="5" stroke-linecap="round"/>
+  <path d="M1085 362L1116 381L1085 400" stroke="#F9F2E7" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <rect x="200" y="502" width="800" height="108" rx="54" fill="#161616"/>
-  <text x="244" y="556" fill="#FFFDF8" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700">MiniMax-2.7-Highspeed + GPT-5.5 oversight ~= GPT-5.5-only output quality?</text>
-  <text x="302" y="591" fill="#D8D1C5" font-family="'Helvetica Neue', Arial, sans-serif" font-size="21">That is the economic bet this workflow is designed to test and operationalize.</text>
+  <g filter="url(#shadow)">
+    <rect x="210" y="624" width="1180" height="132" rx="18" fill="#F9F2E7"/>
+    <text x="260" y="682" fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="43" font-weight="700">MiniMax-2.7 HighSpeed + GPT-5.5 oversight ~= GPT-5.5-only quality?</text>
+    <text x="262" y="726" fill="#56616D" font-family="'Helvetica Neue', Arial, sans-serif" font-size="23">This is the operational bet: cheap iteration, expensive judgment, strict verification.</text>
+  </g>
 
-  <text x="84" y="652" fill="#5B5B5B" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20">Best single worker model today: Claude Sonnet 4.6. Best cost discipline: use premium intelligence sparingly.</text>
+  <text x="100" y="842" fill="#C8D0C8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22">Best single worker today: Claude Sonnet 4.6. Best cost discipline: use premium intelligence sparingly.</text>
 </svg>

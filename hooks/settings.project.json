@@ -1,0 +1,20 @@
+{
+  "codex_claude_ralph": {
+    "mode": "project",
+    "skill_root": ".codex/skills/codex-claude-ralph",
+    "hooks": {
+      "session_bootstrap": {
+        "type": "command",
+        "command": ".codex/skills/codex-claude-ralph/install/doctor.sh"
+      },
+      "worker_intercept": {
+        "type": "command",
+        "command": ".codex/skills/codex-claude-ralph/runtime/scripts/claude-worker-bridge.sh"
+      },
+      "progress_status": {
+        "type": "command",
+        "command": ".codex/skills/codex-claude-ralph/runtime/ralph.sh status --json"
+      }
+    }
+  }
+}

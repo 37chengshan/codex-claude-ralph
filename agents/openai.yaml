@@ -1,0 +1,3 @@
+display_name: Codex Claude Ralph
+short_description: Gated Codex operator -> Claude worker workflow skill.
+default_prompt: /use codex-claude-ralph
